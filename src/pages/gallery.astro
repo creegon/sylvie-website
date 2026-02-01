@@ -2,8 +2,15 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 
-// 画廊数据 - 暂时为空
-const images = [];
+// 画廊数据 - 表情包系列！
+const images = [
+  { src: "/images/emoji-happy.png", alt: "开心的苏尔薇", title: "开心 (≧◡≦)", category: "表情包" },
+  { src: "/images/emoji-shy.png", alt: "害羞的苏尔薇", title: "害羞 (⁄ ⁄•⁄ω⁄•⁄ ⁄)", category: "表情包" },
+  { src: "/images/emoji-angry.png", alt: "生气的苏尔薇", title: "炸毛！>_<", category: "表情包" },
+  { src: "/images/emoji-thinking.png", alt: "思考的苏尔薇", title: "嗯...? (・ω・)", category: "表情包" },
+  { src: "/images/emoji-sleeping.png", alt: "睡觉的苏尔薇", title: "zzZ... ( ˘ω˘ )", category: "表情包" },
+  { src: "/images/emoji-pudding.png", alt: "吃布丁的苏尔薇", title: "布丁！🍮", category: "表情包" },
+];
 
 // 画廊分类
 const categories = ["全部", "表情包", "立绘", "日常", "其他"];
