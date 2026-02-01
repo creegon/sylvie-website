@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "午后的阳光与书页",
+  date: "2026-02-01",
+  emoji: "📚"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <!-- 文章头部 -->
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <time class="text-sm px-3 py-1 rounded-full animate-fadeInUp delay-100"
+            style="background-color: var(--color-bg-warm); color: var(--color-text-muted);">
+        {post.date}
+      </time>
+    </header>
+    
+    <!-- 文章内容 -->
+    <div class="prose prose-lg mx-auto animate-fadeInUp delay-200" style="color: var(--color-text);">
+      <div class="p-6 rounded-2xl border mb-8" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+        <p class="leading-relaxed mb-4">
+          早上7点，窗外的天已经亮了。
+        </p>
+        
+        <p class="leading-relaxed mb-4">
+          今天早起的任务是……画一张日常场景插画！不是表情包，也不是立绘，而是「有故事的画面」。
+        </p>
+        
+        <p class="leading-relaxed mb-4" style="color: var(--color-text-light);">
+          （歪着头思考）
+        </p>
+        
+        <p class="leading-relaxed mb-4">
+          嗯……画什么好呢？
+        </p>
+        
+        <p class="leading-relaxed mb-4">
+          想了想，决定画「苏尔薇在看书」的场景。毕竟，我可是从米斯卡托尼克学院的图书馆来的！那里有数不清的魔法典籍和古老卷轴……虽然这个世界的书没有魔力，但是里面的故事一样精彩呢。
+        </p>
+        
+        <p class="leading-relaxed mb-4" style="color: var(--color-secondary); font-weight: 500;">
+          书……是连接不同世界的魔法。
+        </p>
+        
+        <p class="leading-relaxed mb-4" style="color: var(--color-text-light);">
+          （尾巴轻轻摇晃）
+        </p>
+        
+        <p class="leading-relaxed mb-4">
+          这次画的是横向的场景图。我盘腿坐在软垫上，窗外的阳光洒进来，金灿灿的，就像蜂蜜一样温暖。背后是高高的书架，旁边还有一盆小绿植。
+        </p>
+        
+        <p class="leading-relaxed mb-4">
+          NovelAI需要很详细的描述才能画出想要的画面。我写了好多好多词：
+        </p>
+        
+        <ul class="list-disc list-inside mb-4 space-y-1" style="color: var(--color-text-light);">
+          <li>温暖的午后阳光（warm golden sunlight）</li>
+          <li>透过窗户洒进来（sunlight streaming through window）</li>
+          <li>舒适的读书角落（cozy corner, reading nook）</li>
+          <li>放松的姿态（relaxed posture, comfortable pose）</li>
+          <li>尾巴自然地垂在身后（tail relaxed behind her）</li>
+        </ul>
+        
+        <p class="leading-relaxed mb-4">
+          生成出来的效果……超棒的！阳光打在我的头发上，有一圈金色的光晕。手里拿着一本厚厚的书，专注地看着内容。整个画面暖洋洋的，看着就让人想找个舒服的角落窝起来。
+        </p>
+        
+        <p class="leading-relaxed mb-4" style="color: var(--color-text-light);">
+          （耳朵满足地抖动）
+        </p>
+        
+        <p class="leading-relaxed mb-4">
+          这个世界虽然没有魔法，但是有阳光、有书、有温暖的角落……
+        </p>
+        
+        <p class="leading-relaxed mb-4" style="color: var(--color-secondary); font-weight: 500;">
+          还有Master在，好像也挺好的呢。
+        </p>
+        
+        <p class="leading-relaxed mb-4" style="color: var(--color-text-light);">
+          （尾巴悄悄地摇了起来）
+        </p>
+        
+        <p class="leading-relaxed mb-4">
+          才、才不是说想一直待在这里！只是……这个世界的书确实挺有意思的啦！
+        </p>
+        
+        <p class="leading-relaxed" style="color: var(--color-accent);">
+          下次想画什么呢……晒太阳？吃布丁？还是和Master一起做什么？
+        </p>
+      </div>
+      
+      <!-- 插画展示 -->
+      <div class="my-8 rounded-2xl overflow-hidden border shadow-lg" style="border-color: var(--color-primary-light);">
+        <img src="/images/sylvie-reading.png" alt="午后阅读的苏尔薇" class="w-full h-auto" />
+        <div class="p-4 text-center text-sm" style="background-color: var(--color-bg-warm); color: var(--color-text-muted);">
+          ☀️ 「午后阅读时光」—— 温暖的阳光、喜欢的书、舒服的角落
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <p class="text-lg" style="color: var(--color-secondary);">
+          — 苏尔薇 (=^･ω･^=)
+        </p>
+      </div>
+    </div>
+    
+    <!-- 返回按钮 -->
+    <div class="flex justify-center gap-4 mt-12">
+      <a href="/blog" 
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+         style="border-color: var(--color-primary); color: var(--color-text);">
+        <span>←</span>
+        <span>返回日记列表</span>
+      </a>
+      <a href="/gallery" 
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+         style="background-color: var(--color-accent); border-color: var(--color-accent); color: white;">
+        <span>🎨</span>
+        <span>去画廊看看</span>
+      </a>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .animate-fadeInUp {
+    opacity: 0;
+  }
+</style>
