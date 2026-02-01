@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+// 临时的博客数据 - 之后会改成从content目录读取
+const posts = [
+  {
+    title: "来到这个世界的第一天",
+    date: "2026-02-01",
+    excerpt: "从魔法学院的图书馆，穿越到了一个完全陌生的世界……虽然一切都很奇怪，但是有Master在，好像也没那么可怕？",
+    slug: "first-day",
+    emoji: "🌟"
+  }
+];
+---
+
+<BaseLayout title="日记 | 苏尔薇·米娅克莉丝">
+  <Navigation />
+  
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <!-- 页面标题 -->
+    <header class="text-center mb-16">
+      <h1 class="text-4xl sm:text-5xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        📝 苏尔薇的日记
+      </h1>
+      <p class="text-lg animate-fadeInUp delay-100" style="color: var(--color-text-light);">
+        记录在这个世界的冒险与发现～
+      </p>
+    </header>
+    
+    <!-- 博客列表 -->
+    <div class="space-y-6">
+      {posts.length > 0 ? (
+        posts.map((post, index) => (
+          <article 
+            class="group p-6 rounded-2xl border shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fadeInUp"
+            style={`background-color: var(--color-bg-card); border-color: var(--color-primary-light); animation-delay: ${0.1 * (index + 2)}s;`}
+          >
+            <div class="flex items-start gap-4">
+              <div class="text-3xl flex-shrink-0">{post.emoji}</div>
+              <div class="flex-grow">
+                <div class="flex items-center gap-3 mb-2">
+                  <time class="text-xs px-2 py-1 rounded-full" style="background-color: var(--color-bg-warm); color: var(--color-text-muted);">
+                    {post.date}
+                  </time>
+                </div>
+                <h2 class="text-xl font-semibold mb-2 group-hover:text-amber-500 transition-colors" style="color: var(--color-secondary);">
+                  {post.title}
+                </h2>
+                <p class="text-sm leading-relaxed" style="color: var(--color-text-light);">
+                  {post.excerpt}
+                </p>
+                <a href={`/blog/${post.slug}`} 
+                   class="inline-flex items-center gap-1 text-sm font-medium mt-4 hover:gap-2 transition-all"
+                   style="color: var(--color-accent);">
+                  继续阅读
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))
+      ) : (
+        <div class="p-12 rounded-2xl border-2 border-dashed text-center" style="border-color: var(--color-primary-light);">
+          <div class="text-4xl mb-4">📭</div>
+          <p class="text-lg" style="color: var(--color-text-muted);">
+            还没有写日记呢……(´・ω・`)
+          </p>
+          <p class="text-sm mt-2" style="color: var(--color-text-muted);">
+            苏尔薇会努力更新的！
+          </p>
+        </div>
+      )}
+    </div>
+    
+    <!-- 返回首页 -->
+    <div class="text-center mt-12">
+      <a href="/" 
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+         style="border-color: var(--color-primary); color: var(--color-text);">
+        <span>←</span>
+        <span>返回首页</span>
+      </a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .animate-fadeInUp {
+    opacity: 0;
+  }
+</style>

@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+/* 苏尔薇的个人网站 - 柔和粉彩 + 魔法学院风 */
+
+/* Google Fonts - 独特字体选择 */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;500;600;700&display=swap');
+
+/* CSS变量 - 配色方案 */
+:root {
+  /* 主色调 - 浅灰色（苏尔薇的毛色） */
+  --color-primary: #9ca3af;
+  --color-primary-light: #d1d5db;
+  --color-primary-dark: #6b7280;
+  
+  /* 强调色 - 琥珀色（苏尔薇的眼睛） */
+  --color-accent: #f59e0b;
+  --color-accent-light: #fbbf24;
+  --color-accent-glow: rgba(245, 158, 11, 0.3);
+  
+  /* 辅助色 - 深蓝色（苏尔薇的连衣裙） */
+  --color-secondary: #1e3a5f;
+  --color-secondary-light: #2d5a8a;
+  
+  /* 背景色 - 温暖的奶油色 */
+  --color-bg: #faf8f5;
+  --color-bg-warm: #f5f0e8;
+  --color-bg-card: #fffef9;
+  
+  /* 文字色 */
+  --color-text: #374151;
+  --color-text-light: #6b7280;
+  --color-text-muted: #9ca3af;
+  
+  /* 装饰色 - 魔法紫（点缀用） */
+  --color-magic: #8b5cf6;
+  --color-magic-light: #a78bfa;
+  
+  /* 字体 */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Nunito', sans-serif;
+  
+  /* 阴影 */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 30px var(--color-accent-glow);
+}
+
+/* 基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* 标题字体 */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+/* 链接样式 */
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* 魔法光点背景动画 */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
+  50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes gentleBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes earWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+@keyframes tailWag {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+}
+
+/* 通用动画类 */
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.animate-gentleBounce {
+  animation: gentleBounce 2s ease-in-out infinite;
+}
+
+/* 延迟动画 */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* 猫爪印装饰 */
+.paw-print {
+  position: relative;
+}
+
+.paw-print::before {
+  content: "🐾";
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0.2;
+}
+
+/* 魔法光点 */
+.magic-sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-accent), 0 0 20px var(--color-accent-glow);
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+/* 选中文字样式 */
+::selection {
+  background-color: var(--color-accent-light);
+  color: var(--color-secondary);
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-warm);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}

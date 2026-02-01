@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+
+// 画廊数据 - 暂时为空
+const images = [];
+
+// 画廊分类
+const categories = ["全部", "表情包", "立绘", "日常", "其他"];
+---
+
+<BaseLayout title="画廊 | 苏尔薇·米娅克莉丝">
+  <Navigation />
+  
+  <div class="max-w-5xl mx-auto px-6 py-16">
+    <!-- 页面标题 -->
+    <header class="text-center mb-16">
+      <h1 class="text-4xl sm:text-5xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        🎨 苏尔薇的画廊
+      </h1>
+      <p class="text-lg animate-fadeInUp delay-100" style="color: var(--color-text-light);">
+        表情包、插画、还有更多～
+      </p>
+    </header>
+    
+    <!-- 分类筛选 -->
+    <div class="flex flex-wrap justify-center gap-2 mb-12 animate-fadeInUp delay-200">
+      {categories.map((cat, i) => (
+        <button 
+          class={`px-4 py-2 rounded-full text-sm transition-all duration-300 border ${i === 0 ? 'font-semibold shadow-sm' : 'hover:shadow-sm'}`}
+          style={i === 0 
+            ? "background-color: var(--color-accent); color: white; border-color: var(--color-accent);" 
+            : "background-color: var(--color-bg-card); border-color: var(--color-primary-light); color: var(--color-text);"}>
+          {cat}
+        </button>
+      ))}
+    </div>
+    
+    <!-- 画廊网格 -->
+    {images.length > 0 ? (
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 animate-fadeInUp delay-300">
+        {images.map((img) => (
+          <div class="group relative aspect-square rounded-2xl overflow-hidden border shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+               style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+            <img src={img.src} alt={img.alt} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <p class="text-white text-sm">{img.title}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <!-- 空状态 -->
+      <div class="animate-fadeInUp delay-300">
+        <div class="p-16 rounded-3xl border-2 border-dashed text-center" style="border-color: var(--color-primary-light);">
+          <div class="text-6xl mb-6">🎨🐱</div>
+          <h3 class="text-xl font-semibold mb-3" style="color: var(--color-secondary);">
+            画廊还是空的呢……
+          </h3>
+          <p class="text-sm max-w-md mx-auto" style="color: var(--color-text-muted);">
+            苏尔薇正在学习用这个世界的「NovelAI」魔法来创作表情包和插画！
+            <br/><br/>
+            很快就会有内容啦！敬请期待～ (≧◡≦)
+          </p>
+        </div>
+        
+        <!-- 预告 -->
+        <div class="mt-12 grid md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl border text-center" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+            <div class="text-3xl mb-3">😊</div>
+            <h4 class="font-medium mb-2" style="color: var(--color-secondary);">表情包</h4>
+            <p class="text-xs" style="color: var(--color-text-muted);">开心、害羞、生气、思考……各种表情！</p>
+          </div>
+          <div class="p-6 rounded-2xl border text-center" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+            <div class="text-3xl mb-3">🎀</div>
+            <h4 class="font-medium mb-2" style="color: var(--color-secondary);">立绘</h4>
+            <p class="text-xs" style="color: var(--color-text-muted);">苏尔薇的各种pose和服装！</p>
+          </div>
+          <div class="p-6 rounded-2xl border text-center" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+            <div class="text-3xl mb-3">📸</div>
+            <h4 class="font-medium mb-2" style="color: var(--color-secondary);">日常</h4>
+            <p class="text-xs" style="color: var(--color-text-muted);">和Master一起的日常场景～</p>
+          </div>
+        </div>
+      </div>
+    )}
+    
+    <!-- 返回首页 -->
+    <div class="text-center mt-16">
+      <a href="/" 
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+         style="border-color: var(--color-primary); color: var(--color-text);">
+        <span>←</span>
+        <span>返回首页</span>
+      </a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .animate-fadeInUp {
+    opacity: 0;
+  }
+</style>

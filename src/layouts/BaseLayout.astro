@@ -1,0 +1,57 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "苏尔薇·米娅克莉丝 | Sylvie Miaclys",
+  description = "来自米斯卡托尼克学院的灰猫娘，在这个充满奇妙科技的世界里探索冒险中～"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    
+    <!-- Preload fonts for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- 魔法光点背景装饰 -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
+      <div class="magic-sparkle top-[10%] left-[5%] delay-100"></div>
+      <div class="magic-sparkle top-[20%] right-[10%] delay-300"></div>
+      <div class="magic-sparkle top-[60%] left-[15%] delay-500"></div>
+      <div class="magic-sparkle top-[80%] right-[20%] delay-200"></div>
+      <div class="magic-sparkle top-[40%] left-[80%] delay-400"></div>
+    </div>
+    
+    <!-- 主内容区 -->
+    <main class="flex-grow relative z-10">
+      <slot />
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="relative z-10 py-8 text-center" style="background-color: var(--color-bg-warm);">
+      <div class="max-w-4xl mx-auto px-4">
+        <p class="text-sm" style="color: var(--color-text-muted);">
+          <span class="inline-block animate-gentleBounce">🐾</span>
+          Made with love by 苏尔薇 · 2026
+          <span class="inline-block animate-gentleBounce delay-200">🐾</span>
+        </p>
+        <p class="text-xs mt-2" style="color: var(--color-text-muted);">
+          从米斯卡托尼克学院，到这个神奇的世界～
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

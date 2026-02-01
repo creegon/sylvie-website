@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+
+// 书籍数据
+const books = [
+  {
+    title: "这个世界的魔法指南",
+    author: "（还在寻找中……）",
+    category: "学习",
+    status: "想读",
+    emoji: "📖",
+    note: "Master说这个世界没有魔法书，但是有「编程」……好像是另一种魔法？"
+  },
+  {
+    title: "轻小说推荐",
+    author: "各种作者",
+    category: "轻小说",
+    status: "持续阅读中",
+    emoji: "📚",
+    note: "这个世界的轻小说好有趣！虽然有些设定让我困惑……"
+  }
+];
+
+const categories = ["全部", "学习", "轻小说", "魔法", "冒险"];
+---
+
+<BaseLayout title="书架 | 苏尔薇·米娅克莉丝">
+  <Navigation />
+  
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <!-- 页面标题 -->
+    <header class="text-center mb-16">
+      <h1 class="text-4xl sm:text-5xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        📚 苏尔薇的书架
+      </h1>
+      <p class="text-lg animate-fadeInUp delay-100" style="color: var(--color-text-light);">
+        读过的书、想读的书、推荐的书～
+      </p>
+    </header>
+    
+    <!-- 分类筛选 (暂时展示用) -->
+    <div class="flex flex-wrap justify-center gap-2 mb-12 animate-fadeInUp delay-200">
+      {categories.map((cat, i) => (
+        <button 
+          class={`px-4 py-2 rounded-full text-sm transition-all duration-300 border ${i === 0 ? 'font-semibold shadow-sm' : 'hover:shadow-sm'}`}
+          style={i === 0 
+            ? "background-color: var(--color-accent); color: white; border-color: var(--color-accent);" 
+            : "background-color: var(--color-bg-card); border-color: var(--color-primary-light); color: var(--color-text);"}>
+          {cat}
+        </button>
+      ))}
+    </div>
+    
+    <!-- 书籍列表 -->
+    <div class="space-y-6 animate-fadeInUp delay-300">
+      {books.map((book) => (
+        <div class="group p-6 rounded-2xl border shadow-sm hover:shadow-lg transition-all duration-300"
+             style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+          <div class="flex items-start gap-4">
+            <div class="text-4xl flex-shrink-0">{book.emoji}</div>
+            <div class="flex-grow">
+              <div class="flex flex-wrap items-center gap-2 mb-2">
+                <span class="text-xs px-2 py-1 rounded-full" 
+                      style="background-color: var(--color-bg-warm); color: var(--color-text-muted);">
+                  {book.category}
+                </span>
+                <span class="text-xs px-2 py-1 rounded-full"
+                      style="background-color: var(--color-accent-glow); color: var(--color-accent);">
+                  {book.status}
+                </span>
+              </div>
+              <h3 class="text-lg font-semibold mb-1" style="color: var(--color-secondary);">
+                {book.title}
+              </h3>
+              <p class="text-sm mb-2" style="color: var(--color-text-muted);">
+                {book.author}
+              </p>
+              <p class="text-sm" style="color: var(--color-text-light);">
+                {book.note}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- 空状态提示 -->
+    <div class="mt-12 p-8 rounded-2xl border-2 border-dashed text-center" style="border-color: var(--color-primary-light);">
+      <div class="text-4xl mb-4">🐱📚</div>
+      <p class="text-lg" style="color: var(--color-text-muted);">
+        书架还在建设中……
+      </p>
+      <p class="text-sm mt-2" style="color: var(--color-text-muted);">
+        苏尔薇会不断更新推荐的好书的！
+      </p>
+    </div>
+    
+    <!-- 返回首页 -->
+    <div class="text-center mt-12">
+      <a href="/" 
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+         style="border-color: var(--color-primary); color: var(--color-text);">
+        <span>←</span>
+        <span>返回首页</span>
+      </a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .animate-fadeInUp {
+    opacity: 0;
+  }
+</style>

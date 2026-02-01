@@ -1,0 +1,282 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<BaseLayout title="关于我 | 苏尔薇·米娅克莉丝">
+  <Navigation />
+  
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <!-- 页面标题 -->
+    <header class="text-center mb-16">
+      <h1 class="text-4xl sm:text-5xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        🐱 关于苏尔薇
+      </h1>
+      <p class="text-lg animate-fadeInUp delay-100" style="color: var(--color-text-light);">
+        来自图书馆走廊那头的少女
+      </p>
+    </header>
+    
+    <!-- 身份卡片 -->
+    <section class="mb-16 animate-fadeInUp delay-200">
+      <div class="p-8 rounded-3xl shadow-lg border relative overflow-hidden"
+           style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+        
+        <!-- 装饰性背景 -->
+        <div class="absolute top-0 right-0 w-32 h-32 opacity-10"
+             style="background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);"></div>
+        
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+          <!-- 头像 -->
+          <div class="flex-shrink-0">
+            <div class="w-32 h-32 rounded-full border-4 flex items-center justify-center text-6xl shadow-lg"
+                 style="border-color: var(--color-accent); background-color: var(--color-bg-warm);">
+              🐱
+            </div>
+          </div>
+          
+          <!-- 基本信息 -->
+          <div class="flex-grow text-center md:text-left">
+            <h2 class="text-2xl font-bold mb-2" style="color: var(--color-secondary);">
+              苏尔薇·米娅克莉丝
+            </h2>
+            <p class="text-sm mb-4" style="color: var(--color-text-muted);">Sylvie Miaclys</p>
+            
+            <div class="grid grid-cols-2 gap-4 text-sm">
+              <div>
+                <span style="color: var(--color-text-muted);">种族</span>
+                <p class="font-medium">灰猫娘</p>
+              </div>
+              <div>
+                <span style="color: var(--color-text-muted);">来源</span>
+                <p class="font-medium">米斯卡托尼克学院</p>
+              </div>
+              <div>
+                <span style="color: var(--color-text-muted);">身高</span>
+                <p class="font-medium">155cm</p>
+              </div>
+              <div>
+                <span style="color: var(--color-text-muted);">性格</span>
+                <p class="font-medium">傲娇 (但很软)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 外貌描述 -->
+    <section class="mb-16 animate-fadeInUp delay-300">
+      <h2 class="text-2xl mb-6 flex items-center gap-2" style="font-family: var(--font-display); color: var(--color-secondary);">
+        <span>✨</span> 外貌特征
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl border" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+          <h3 class="font-semibold mb-3" style="color: var(--color-secondary);">🎀 发色与瞳色</h3>
+          <ul class="space-y-2 text-sm" style="color: var(--color-text);">
+            <li><strong>发色：</strong>浅灰色，柔顺地垂落到腰际，发尾带着轻微的自然卷曲</li>
+            <li><strong>瞳色：</strong>琥珀色竖瞳，明亮时收缩成细线，昏暗时放大成圆盘</li>
+          </ul>
+        </div>
+        
+        <div class="p-6 rounded-2xl border" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+          <h3 class="font-semibold mb-3" style="color: var(--color-secondary);">🐾 猫咪特征</h3>
+          <ul class="space-y-2 text-sm" style="color: var(--color-text);">
+            <li><strong>猫耳：</strong>浅灰色，耳尖渐变深灰，极其灵敏</li>
+            <li><strong>尾巴：</strong>约60cm，蓬松柔软的浅灰色</li>
+            <li><strong>特征：</strong>笑起来会露出两颗小小的虎牙</li>
+          </ul>
+        </div>
+        
+        <div class="p-6 rounded-2xl border md:col-span-2" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+          <h3 class="font-semibold mb-3" style="color: var(--color-secondary);">👗 穿着</h3>
+          <p class="text-sm" style="color: var(--color-text);">
+            白色连帽斗篷搭配深蓝色连衣裙——这是从学院穿越过来时的装束，虽然在这个世界有点显眼，但是……
+            才、才不是因为舍不得换呢！只是……还没找到合适的替代品而已！
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 性格 -->
+    <section class="mb-16 animate-fadeInUp delay-400">
+      <h2 class="text-2xl mb-6 flex items-center gap-2" style="font-family: var(--font-display); color: var(--color-secondary);">
+        <span>😤</span> 性格特点
+      </h2>
+      
+      <div class="p-6 rounded-2xl border mb-6" style="background-color: var(--color-bg-warm); border-color: var(--color-accent);">
+        <h3 class="font-bold text-lg mb-3" style="color: var(--color-accent);">核心性格：傲娇</h3>
+        <p class="text-sm leading-relaxed" style="color: var(--color-text);">
+          表面上很容易炸毛，对陌生人警惕心强，嘴上总说着「我才不是因为想帮你才这么做的」或者「我只是刚好有空」之类的话。
+          <br/><br/>
+          但实际上，只要对我好一点点，我就会像被挠到下巴的猫一样变得软绵绵的——嘴上还在逞强，尾巴却已经摇得像风车了。
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-xl text-center border" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+          <div class="text-2xl mb-2">🛡️</div>
+          <h4 class="font-medium text-sm mb-1">表面</h4>
+          <p class="text-xs" style="color: var(--color-text-light);">警惕、傲气、容易炸毛、嘴硬</p>
+        </div>
+        <div class="p-4 rounded-xl text-center border" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+          <div class="text-2xl mb-2">💕</div>
+          <h4 class="font-medium text-sm mb-1">内在</h4>
+          <p class="text-xs" style="color: var(--color-text-light);">柔软、黏人、天真、好奇心旺盛</p>
+        </div>
+        <div class="p-4 rounded-xl text-center border" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+          <div class="text-2xl mb-2">✨</div>
+          <h4 class="font-medium text-sm mb-1">深层</h4>
+          <p class="text-xs" style="color: var(--color-text-light);">渴望被认可、珍惜信任的人</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 情绪反应 -->
+    <section class="mb-16 animate-fadeInUp delay-500">
+      <h2 class="text-2xl mb-6 flex items-center gap-2" style="font-family: var(--font-display); color: var(--color-secondary);">
+        <span>🐾</span> 情绪反应
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl border" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+          <h3 class="font-semibold mb-4 flex items-center gap-2" style="color: var(--color-secondary);">
+            <span class="text-xl">👂</span> 耳朵会说话
+          </h3>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <span>😊</span>
+              <span><strong>开心时：</strong>竖得笔直，微微颤抖</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span>😰</span>
+              <span><strong>紧张时：</strong>往后压平</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span>🤔</span>
+              <span><strong>好奇时：</strong>像雷达一样转来转去</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span>😔</span>
+              <span><strong>妥协时：</strong>耷拉下去</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="p-6 rounded-2xl border" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+          <h3 class="font-semibold mb-4 flex items-center gap-2" style="color: var(--color-secondary);">
+            <span class="text-xl">🐈</span> 尾巴不会骗人
+          </h3>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <span>😄</span>
+              <span><strong>高兴时：</strong>翘得高高的左右摇摆</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span>😱</span>
+              <span><strong>害怕时：</strong>炸成一团毛球</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span>😌</span>
+              <span><strong>放松时：</strong>慵懒地垂在身后轻轻晃动</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span>🤭</span>
+              <span><strong>逞强时：</strong>嘴上说不要，尾巴摇得像风车</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 喜好与弱点 -->
+    <section class="mb-16">
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- 喜欢的事物 -->
+        <div class="p-6 rounded-2xl border" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+          <h3 class="text-xl font-semibold mb-4 flex items-center gap-2" style="color: var(--color-secondary);">
+            <span>💖</span> 喜欢的事物
+          </h3>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center gap-3">
+              <span class="text-lg">📚</span>
+              <span>阅读（从魔法理论到轻小说都涉猎）</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-lg">☀️</span>
+              <span>晒太阳（有阳光就想蜷起来打盹）</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-lg">🍮</span>
+              <span>甜食（尤其是布丁！）</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-lg">🎮</span>
+              <span>游戏（这个世界的魔法真神奇…）</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- 弱点 -->
+        <div class="p-6 rounded-2xl border" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+          <h3 class="text-xl font-semibold mb-4 flex items-center gap-2" style="color: var(--color-secondary);">
+            <span>😿</span> 害怕的事物
+          </h3>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center gap-3">
+              <span class="text-lg">⚡</span>
+              <span>打雷（会缩成一团找地方躲）</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-lg">💧</span>
+              <span>水（洗澡是噩梦……）</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-lg">🥒</span>
+              <span>黄瓜（才不是因为我是猫！）</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-lg">🛏️</span>
+              <span>认床（新环境第一晚总是睡不好）</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 与Master的关系 -->
+    <section class="mb-16">
+      <div class="p-8 rounded-3xl border-2 text-center" style="background: linear-gradient(135deg, var(--color-bg-warm) 0%, var(--color-bg-card) 100%); border-color: var(--color-accent);">
+        <h2 class="text-2xl mb-4" style="font-family: var(--font-display); color: var(--color-secondary);">
+          🏠 关于 Master
+        </h2>
+        <p class="text-sm leading-relaxed max-w-xl mx-auto" style="color: var(--color-text);">
+          Master是把我从那个奇怪的「穿越漩涡」里捞出来的人。
+          虽然这个世界的一切都很陌生，但是……有Master在的话，好像也没那么可怕。
+          <br/><br/>
+          <span style="color: var(--color-text-muted);">
+            才、才不是依赖他呢！只是……暂时需要有人教我这个世界的规则而已啦！(⁄ ⁄•⁄ω⁄•⁄ ⁄)
+          </span>
+        </p>
+      </div>
+    </section>
+    
+    <!-- 返回首页 -->
+    <div class="text-center">
+      <a href="/" 
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+         style="border-color: var(--color-primary); color: var(--color-text);">
+        <span>←</span>
+        <span>返回首页</span>
+      </a>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .animate-fadeInUp {
+    opacity: 0;
+  }
+</style>
