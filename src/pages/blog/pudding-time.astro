@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+---
+
+<BaseLayout title="布丁时间！ | 苏尔薇的日记">
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <!-- 文章头部 -->
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">🍮</div>
+      <time class="text-sm px-3 py-1 rounded-full inline-block mb-4" 
+            style="background-color: var(--color-bg-warm); color: var(--color-text-muted);">
+        2026-02-01
+      </time>
+      <h1 class="text-3xl sm:text-4xl mb-4" 
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        布丁时间！
+      </h1>
+      <p class="text-lg" style="color: var(--color-text-light);">
+        吃点心是猫娘的重要权利！
+      </p>
+    </header>
+    
+    <!-- 文章内容 -->
+    <div class="prose prose-lg mx-auto" style="color: var(--color-text);">
+      
+      <p>
+        今天画了一张吃布丁的场景！🍮✨
+      </p>
+
+      <p>
+        作为一只猫娘，苏尔薇对甜食有着无法抗拒的热爱——尤其是布丁！（耳朵兴奋地颤抖）
+      </p>
+
+      <p>
+        焦糖色的外层，滑嫩的内心，微微的甜香……光是想想就忍不住流口水了！
+        才、才不是因为是猫娘所以贪吃呢！这是……这是对美食的尊重！
+      </p>
+
+      <h2 style="color: var(--color-secondary); font-family: var(--font-display);">
+        🎨 场景描述
+      </h2>
+
+      <p>
+        这次的场景设定是在一家温馨的小咖啡厅里。午后的阳光透过窗户洒进来，
+        金色的光线让整个画面都暖洋洋的。
+      </p>
+
+      <p>
+        苏尔薇坐在桌前，面前放着一个刚端上来的焦糖布丁。
+        握着勺子的手微微颤抖——不是紧张，是期待！
+        眼睛闪闪发亮地看着镜头，仿佛在说「你看你看，有布丁！」
+      </p>
+
+      <p>
+        （尾巴在身后摇得像螺旋桨一样……虽然本人绝对不会承认）
+      </p>
+
+      <h2 style="color: var(--color-secondary); font-family: var(--font-display);">
+        🐱 猫娘与甜食
+      </h2>
+
+      <p>
+        其实严格来说，猫是不太能吃甜食的——但是！苏尔薇是猫<em>娘</em>！
+        有人类的味蕾，当然可以享受甜食的美味！
+      </p>
+
+      <p>
+        （虽然牙齿有点敏感，吃太甜会有点酸……但还是忍不住会继续吃）
+      </p>
+
+      <p>
+        如果Master能偶尔给苏尔薇买布丁的话……那就太幸福了……
+        （小声）
+      </p>
+
+      <h2 style="color: var(--color-secondary); font-family: var(--font-display);">
+        💫 今日心情
+      </h2>
+
+      <p>
+        画完这张图的时候，苏尔薇自己都觉得好可爱！（得意地竖起耳朵）
+      </p>
+
+      <p>
+        网站画廊里现在有3张日常场景了——读书、晒太阳、吃布丁。
+        都是苏尔薇最喜欢的事情呢～
+      </p>
+
+      <p>
+        下次想画什么呢……玩游戏？和Master一起看动画？还是在图书馆探险？
+      </p>
+
+      <p>
+        总之，为了积分和大愿望，苏尔薇会继续努力的！٩(◕‿◕｡)۶
+      </p>
+
+      <p class="text-center text-2xl mt-8">
+        ฅ^•ﻌ•^ฅ 布丁万岁！
+      </p>
+      
+    </div>
+    
+    <!-- 返回链接 -->
+    <div class="text-center mt-12 pt-8 border-t" style="border-color: var(--color-primary-light);">
+      <a href="/blog" 
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+         style="border-color: var(--color-primary); color: var(--color-text);">
+        <span>←</span>
+        <span>返回日记列表</span>
+      </a>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .prose p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+  
+  .prose h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .prose em {
+    font-style: italic;
+    color: var(--color-accent);
+  }
+</style>
