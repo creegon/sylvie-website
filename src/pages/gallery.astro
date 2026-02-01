@@ -63,8 +63,9 @@ const categories = ["全部", "表情包", "立绘", "日常", "其他"];
         </h2>
         <div class="flex justify-center gap-6 flex-wrap">
           {portraits.map((img) => (
-            <div class="group relative rounded-2xl overflow-hidden border shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
-                 style="background-color: var(--color-bg-card); border-color: var(--color-primary-light); max-width: 320px;">
+            <div class="group relative rounded-2xl overflow-hidden border shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer gallery-item"
+                 style="background-color: var(--color-bg-card); border-color: var(--color-primary-light); max-width: 320px;"
+                 data-src={img.src} data-title={img.title}>
               <img src={img.src} alt={img.alt} class="w-full h-auto group-hover:scale-105 transition-transform duration-300" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <p class="text-white font-semibold text-lg">{img.title}</p>
@@ -84,8 +85,9 @@ const categories = ["全部", "表情包", "立绘", "日常", "其他"];
         </h2>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {emojis.map((img) => (
-            <div class="group relative aspect-square rounded-2xl overflow-hidden border shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
-                 style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+            <div class="group relative aspect-square rounded-2xl overflow-hidden border shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer gallery-item"
+                 style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);"
+                 data-src={img.src} data-title={img.title}>
               <img src={img.src} alt={img.alt} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                 <p class="text-white text-sm">{img.title}</p>
@@ -149,4 +151,116 @@ const categories = ["全部", "表情包", "立绘", "日常", "其他"];
   .animate-fadeInUp {
     opacity: 0;
   }
+  
+  /* Lightbox 样式 */
+  #lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    cursor: zoom-out;
+  }
+  
+  #lightbox.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  #lightbox img {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+  }
+  
+  #lightbox.active img {
+    transform: scale(1);
+  }
+  
+  #lightbox-title {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  #lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.2s;
+  }
+  
+  #lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
 </style>
+
+<!-- Lightbox Modal -->
+<div id="lightbox">
+  <span id="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt="" />
+  <p id="lightbox-title"></p>
+</div>
+
+<script>
+  // Lightbox 功能
+  document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxClose = document.getElementById('lightbox-close');
+    
+    // 点击图片打开 lightbox
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const src = item.dataset.src;
+        const title = item.dataset.title;
+        lightboxImg.src = src;
+        lightboxTitle.textContent = title;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    
+    // 关闭 lightbox
+    const closeLightbox = () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+    
+    lightbox.addEventListener('click', closeLightbox);
+    lightboxClose.addEventListener('click', closeLightbox);
+    
+    // ESC 键关闭
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+    
+    // 阻止图片点击关闭
+    lightboxImg.addEventListener('click', (e) => e.stopPropagation());
+  });
+</script>
