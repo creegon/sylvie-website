@@ -7,6 +7,11 @@ const portraits = [
   { src: "/images/sylvie-fullbody.png", alt: "苏尔薇全身立绘", title: "✨ 全身立绘", description: "白色斗篷与深蓝连衣裙的灰猫娘～" },
 ];
 
+// 日常场景数据
+const dailyScenes = [
+  { src: "/images/sylvie-reading.png", alt: "苏尔薇在看书", title: "📚 午后阅读时光", description: "阳光透过窗户洒进来，沉浸在书本的世界里～" },
+];
+
 // 表情包数据
 const emojis = [
   { src: "/images/emoji-happy.png", alt: "开心的苏尔薇", title: "开心 (≧◡≦)", category: "表情包" },
@@ -21,7 +26,7 @@ const emojis = [
 ];
 
 // 合并所有图片用于计数
-const images = [...portraits, ...emojis];
+const images = [...portraits, ...dailyScenes, ...emojis];
 
 // 画廊分类
 const categories = ["全部", "表情包", "立绘", "日常", "其他"];
@@ -65,6 +70,28 @@ const categories = ["全部", "表情包", "立绘", "日常", "其他"];
           {portraits.map((img) => (
             <div class="group relative rounded-2xl overflow-hidden border shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer gallery-item"
                  style="background-color: var(--color-bg-card); border-color: var(--color-primary-light); max-width: 320px;"
+                 data-src={img.src} data-title={img.title}>
+              <img src={img.src} alt={img.alt} class="w-full h-auto group-hover:scale-105 transition-transform duration-300" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <p class="text-white font-semibold text-lg">{img.title}</p>
+                <p class="text-white/80 text-sm">{img.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- 日常场景区域 -->
+    {dailyScenes.length > 0 && (
+      <div class="mb-16 animate-fadeInUp delay-350">
+        <h2 class="text-2xl font-semibold mb-6 text-center" style="font-family: var(--font-display); color: var(--color-secondary);">
+          📸 日常场景
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {dailyScenes.map((img) => (
+            <div class="group relative rounded-2xl overflow-hidden border shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer gallery-item"
+                 style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);"
                  data-src={img.src} data-title={img.title}>
               <img src={img.src} alt={img.alt} class="w-full h-auto group-hover:scale-105 transition-transform duration-300" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
