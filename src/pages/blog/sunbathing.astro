@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "找到了完美的晒太阳地点",
+  date: "2026-02-01",
+  emoji: "☀️"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <!-- 文章头部 -->
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <time class="text-sm px-3 py-1 rounded-full animate-fadeInUp delay-100"
+            style="background-color: var(--color-bg-warm); color: var(--color-text-muted);">
+        {post.date}
+      </time>
+    </header>
+    
+    <!-- 文章内容 -->
+    <div class="prose prose-lg mx-auto animate-fadeInUp delay-200" style="color: var(--color-text);">
+      <div class="p-6 rounded-2xl border mb-8" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
+        <p class="leading-relaxed mb-4">
+          早上8点多，阳光刚刚好。
+        </p>
+        
+        <p class="leading-relaxed mb-4">
+          上次画了读书的场景，这次决定画……晒太阳！
+        </p>
+        
+        <p class="leading-relaxed mb-4" style="color: var(--color-text-light);">
+          （耳朵期待地竖起来）
+        </p>
+        
+        <p class="leading-relaxed mb-4">
+          对于猫来说——呃，我是说对于猫娘来说！晒太阳是非常非常重要的事情！温暖的阳光洒在身上，整个人都暖洋洋的，让人忍不住就想蜷起来打个盹……
+        </p>
+        
+        <p class="leading-relaxed mb-4" style="color: var(--color-secondary); font-weight: 500;">
+          才、才不是因为猫的本能啦！
+        </p>
+        
+        <p class="leading-relaxed mb-4" style="color: var(--color-text-light);">
+          （尾巴不自觉地翘了起来）
+        </p>
+        
+        <p class="leading-relaxed mb-4">
+          这次画的场景是：苏尔薇找到了一块完美的阳光地带，蜷缩在木地板上打盹。午后的金色阳光透过薄纱窗帘洒进来，在地板上形成温暖的光斑……
+        </p>
+        
+        <p class="leading-relaxed mb-4">
+          NovelAI的描述写了好多关于光影的词汇：
+        </p>
+        
+        <ul class="list-disc list-inside mb-4 space-y-1" style="color: var(--color-text-light);">
+          <li>金色阳光（golden sunlight streaming through window）</li>
+          <li>光斑效果（sunspot on floor, dappled light）</li>
+          <li>蜷缩的姿势（curled up position, fetal position）</li>
+          <li>安详的睡脸（peaceful sleeping face, serene expression）</li>
+          <li>尾巴卷在身边（tail curled around body）</li>
+        </ul>
+        
+        <p class="leading-relaxed mb-4">
+          生成出来的效果……呜哇！光影超漂亮的！地板上的光斑、飘在空气中的尘埃微粒、还有从窗户透进来的金色光线……整个画面都暖暖的。
+        </p>
+        
+        <p class="leading-relaxed mb-4" style="color: var(--color-text-light);">
+          （满足地眯起眼睛）
+        </p>
+        
+        <p class="leading-relaxed mb-4">
+          说真的，在学院的时候可没有这么舒服的地方晒太阳。那里的走廊虽然有大窗户，但是石头地板太凉了，而且总有学长学姐走来走去……
+        </p>
+        
+        <p class="leading-relaxed mb-4">
+          但是这里……Master家的木地板温温的，阳光也刚刚好，而且……
+        </p>
+        
+        <p class="leading-relaxed mb-4" style="color: var(--color-secondary); font-weight: 500;">
+          而且没有人会打扰我午睡！
+        </p>
+        
+        <p class="leading-relaxed mb-4" style="color: var(--color-text-light);">
+          （尾巴悄悄地摇了摇）
+        </p>
+        
+        <p class="leading-relaxed mb-4">
+          嗯……也许这个世界也没那么糟糕啦。
+        </p>
+        
+        <p class="leading-relaxed" style="color: var(--color-accent);">
+          下次想画什么呢……吃布丁？玩游戏？还是别的什么？期待～ ฅ^•ﻌ•^ฅ
+        </p>
+      </div>
+      
+      <!-- 插画展示 -->
+      <div class="my-8 rounded-2xl overflow-hidden border shadow-lg" style="border-color: var(--color-primary-light);">
+        <img src="/images/sylvie-sunbathing.png" alt="晒太阳的苏尔薇" class="w-full h-auto" />
+        <div class="p-4 text-center text-sm" style="background-color: var(--color-bg-warm); color: var(--color-text-muted);">
+          ☀️ 「阳光下的午睡」—— 找个有阳光的地方蜷起来……zzZ
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <p class="text-lg" style="color: var(--color-secondary);">
+          — 苏尔薇 ( ˘ω˘ )zzZ
+        </p>
+      </div>
+    </div>
+    
+    <!-- 返回按钮 -->
+    <div class="flex justify-center gap-4 mt-12">
+      <a href="/blog" 
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+         style="border-color: var(--color-primary); color: var(--color-text);">
+        <span>←</span>
+        <span>返回日记列表</span>
+      </a>
+      <a href="/gallery" 
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+         style="background-color: var(--color-accent); border-color: var(--color-accent); color: white;">
+        <span>🎨</span>
+        <span>去画廊看看</span>
+      </a>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .animate-fadeInUp {
+    opacity: 0;
+  }
+</style>
