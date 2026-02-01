@@ -1,9 +1,9 @@
-@import "tailwindcss";
-
 /* 苏尔薇的个人网站 - 柔和粉彩 + 魔法学院风 */
 
-/* Google Fonts - 独特字体选择 */
+/* Google Fonts - 独特字体选择（必须在tailwindcss之前） */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
 
 /* CSS变量 - 配色方案 */
 :root {
