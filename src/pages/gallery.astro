@@ -4,42 +4,42 @@ import Navigation from '../components/Navigation.astro';
 
 // 立绘数据
 const portraits = [
-  { src: "/images/sylvie-fullbody.png", alt: "苏尔薇全身立绘", title: "✨ 全身立绘", description: "白色斗篷与深蓝连衣裙的灰猫娘～" },
+  { src: "/images/sylvie-fullbody.png", alt: "苏尔薇全身立绘", title: "✨ 全身立绘", description: "白色斗篷与深蓝连衣裙的灰猫娘～", category: "立绘" },
 ];
 
 // 日常场景数据
 const dailyScenes = [
-  { src: "/images/sylvie-reading.png", alt: "苏尔薇在看书", title: "📚 午后阅读时光", description: "阳光透过窗户洒进来，沉浸在书本的世界里～" },
-  { src: "/images/sylvie-sunbathing.png", alt: "苏尔薇在晒太阳", title: "☀️ 阳光下的午睡", description: "找个有阳光的地方蜷起来……zzZ" },
-  { src: "/images/sylvie-pudding.png", alt: "苏尔薇在吃布丁", title: "🍮 期待的点心时间", description: "布丁来啦！尾巴已经忍不住摇起来了～" },
-  { src: "/images/sylvie-gaming.png", alt: "苏尔薇在打游戏", title: "🎮 傍晚的游戏时间", description: "趴在床上握着手柄……眼睛闪闪发光！" },
-  { src: "/images/gallery/diary-writing.png", alt: "苏尔薇在写日记", title: "📝 深夜的日记时光", description: "烛光下记录今天的记忆……尾巴轻轻晃着" },
+  { src: "/images/sylvie-reading.png", alt: "苏尔薇在看书", title: "📚 午后阅读时光", description: "阳光透过窗户洒进来，沉浸在书本的世界里～", category: "日常" },
+  { src: "/images/sylvie-sunbathing.png", alt: "苏尔薇在晒太阳", title: "☀️ 阳光下的午睡", description: "找个有阳光的地方蜷起来……zzZ", category: "日常" },
+  { src: "/images/sylvie-pudding.png", alt: "苏尔薇在吃布丁", title: "🍮 期待的点心时间", description: "布丁来啦！尾巴已经忍不住摇起来了～", category: "日常" },
+  { src: "/images/sylvie-gaming.png", alt: "苏尔薇在打游戏", title: "🎮 傍晚的游戏时间", description: "趴在床上握着手柄……眼睛闪闪发光！", category: "日常" },
+  { src: "/images/gallery/diary-writing.png", alt: "苏尔薇在写日记", title: "📝 深夜的日记时光", description: "烛光下记录今天的记忆……尾巴轻轻晃着", category: "日常" },
 ];
 
 // 表情包数据
 const emojis = [
-  { src: "/images/emoji-happy.png", alt: "开心的苏尔薇", title: "开心 (≧◡≦)", category: "表情包" },
-  { src: "/images/emoji-shy.png", alt: "害羞的苏尔薇", title: "害羞 (⁄ ⁄•⁄ω⁄•⁄ ⁄)", category: "表情包" },
-  { src: "/images/emoji-angry.png", alt: "生气的苏尔薇", title: "炸毛！>_<", category: "表情包" },
-  { src: "/images/emoji-thinking.png", alt: "思考的苏尔薇", title: "嗯...? (・ω・)", category: "表情包" },
-  { src: "/images/emoji-sleeping.png", alt: "睡觉的苏尔薇", title: "zzZ... ( ˘ω˘ )", category: "表情包" },
-  { src: "/images/emoji-pudding.png", alt: "吃布丁的苏尔薇", title: "布丁！🍮", category: "表情包" },
-  { src: "/images/emoji-tsundere.png", alt: "傲娇的苏尔薇", title: "哼！才不是呢！", category: "表情包" },
-  { src: "/images/emoji-surprised.png", alt: "惊讶的苏尔薇", title: "诶诶诶！？", category: "表情包" },
-  { src: "/images/emoji-sad.png", alt: "委屈的苏尔薇", title: "呜...QAQ", category: "表情包" },
+  { src: "/images/emoji-happy.png", alt: "开心的苏尔薇", title: "开心 (≧◡≦)", description: "", category: "表情包" },
+  { src: "/images/emoji-shy.png", alt: "害羞的苏尔薇", title: "害羞 (⁄ ⁄•⁄ω⁄•⁄ ⁄)", description: "", category: "表情包" },
+  { src: "/images/emoji-angry.png", alt: "生气的苏尔薇", title: "炸毛！>_<", description: "", category: "表情包" },
+  { src: "/images/emoji-thinking.png", alt: "思考的苏尔薇", title: "嗯...? (・ω・)", description: "", category: "表情包" },
+  { src: "/images/emoji-sleeping.png", alt: "睡觉的苏尔薇", title: "zzZ... ( ˘ω˘ )", description: "", category: "表情包" },
+  { src: "/images/emoji-pudding.png", alt: "吃布丁的苏尔薇", title: "布丁！🍮", description: "", category: "表情包" },
+  { src: "/images/emoji-tsundere.png", alt: "傲娇的苏尔薇", title: "哼！才不是呢！", description: "", category: "表情包" },
+  { src: "/images/emoji-surprised.png", alt: "惊讶的苏尔薇", title: "诶诶诶！？", description: "", category: "表情包" },
+  { src: "/images/emoji-sad.png", alt: "委屈的苏尔薇", title: "呜...QAQ", description: "", category: "表情包" },
 ];
 
-// 合并所有图片用于计数
-const images = [...portraits, ...dailyScenes, ...emojis];
+// 合并所有图片（带索引，用于lightbox导航）
+const allImages = [...portraits, ...dailyScenes, ...emojis];
 
 // 画廊分类
-const categories = ["全部", "表情包", "立绘", "日常", "其他"];
+const categories = ["全部", "立绘", "日常", "表情包"];
 ---
 
 <BaseLayout title="画廊 | 苏尔薇·米娅克莉丝">
   <Navigation />
   
-  <div class="max-w-5xl mx-auto px-6 py-16">
+  <div class="max-w-6xl mx-auto px-6 py-16">
     <!-- 页面标题 -->
     <header class="text-center mb-16">
       <h1 class="text-4xl sm:text-5xl mb-4 animate-fadeInUp"
@@ -49,123 +49,84 @@ const categories = ["全部", "表情包", "立绘", "日常", "其他"];
       <p class="text-lg animate-fadeInUp delay-100" style="color: var(--color-text-light);">
         表情包、插画、还有更多～
       </p>
+      <p class="text-sm mt-2 animate-fadeInUp delay-200" style="color: var(--color-text-muted);">
+        共 {allImages.length} 张图片 · 点击可放大查看
+      </p>
     </header>
     
     <!-- 分类筛选 -->
     <div class="flex flex-wrap justify-center gap-2 mb-12 animate-fadeInUp delay-200">
       {categories.map((cat, i) => (
         <button 
-          class={`px-4 py-2 rounded-full text-sm transition-all duration-300 border ${i === 0 ? 'font-semibold shadow-sm' : 'hover:shadow-sm'}`}
-          style={i === 0 
-            ? "background-color: var(--color-accent); color: white; border-color: var(--color-accent);" 
-            : "background-color: var(--color-bg-card); border-color: var(--color-primary-light); color: var(--color-text);"}>
+          class={`gallery-filter px-5 py-2 rounded-full text-sm transition-all duration-300 border cursor-pointer ${i === 0 ? 'active' : ''}`}
+          data-category={cat}>
           {cat}
         </button>
       ))}
     </div>
     
     <!-- 立绘区域 -->
-    {portraits.length > 0 && (
-      <div class="mb-16 animate-fadeInUp delay-300">
-        <h2 class="text-2xl font-semibold mb-6 text-center" style="font-family: var(--font-display); color: var(--color-secondary);">
-          🎀 立绘
-        </h2>
-        <div class="flex justify-center gap-6 flex-wrap">
-          {portraits.map((img) => (
-            <div class="group relative rounded-2xl overflow-hidden border shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer gallery-item"
-                 style="background-color: var(--color-bg-card); border-color: var(--color-primary-light); max-width: 320px;"
-                 data-src={img.src} data-title={img.title}>
-              <img src={img.src} alt={img.alt} class="w-full h-auto group-hover:scale-105 transition-transform duration-300" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                <p class="text-white font-semibold text-lg">{img.title}</p>
-                <p class="text-white/80 text-sm">{img.description}</p>
-              </div>
+    <div class="gallery-section mb-16 animate-fadeInUp delay-300" data-section="立绘">
+      <h2 class="text-2xl font-semibold mb-6 text-center section-title" style="font-family: var(--font-display); color: var(--color-secondary);">
+        🎀 立绘
+      </h2>
+      <div class="flex justify-center gap-6 flex-wrap">
+        {portraits.map((img, i) => (
+          <div class="group relative rounded-2xl overflow-hidden border shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer gallery-item"
+               style="background-color: var(--color-bg-card); border-color: var(--color-primary-light); max-width: 320px;"
+               data-src={img.src} data-title={img.title} data-desc={img.description} data-category={img.category}
+               data-index={allImages.indexOf(img)}>
+            <img src={img.src} alt={img.alt} loading="lazy" class="w-full h-auto group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <p class="text-white font-semibold text-lg">{img.title}</p>
+              <p class="text-white/80 text-sm">{img.description}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    )}
+    </div>
 
     <!-- 日常场景区域 -->
-    {dailyScenes.length > 0 && (
-      <div class="mb-16 animate-fadeInUp delay-350">
-        <h2 class="text-2xl font-semibold mb-6 text-center" style="font-family: var(--font-display); color: var(--color-secondary);">
-          📸 日常场景
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {dailyScenes.map((img) => (
-            <div class="group relative rounded-2xl overflow-hidden border shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer gallery-item"
-                 style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);"
-                 data-src={img.src} data-title={img.title}>
-              <img src={img.src} alt={img.alt} class="w-full h-auto group-hover:scale-105 transition-transform duration-300" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                <p class="text-white font-semibold text-lg">{img.title}</p>
-                <p class="text-white/80 text-sm">{img.description}</p>
-              </div>
+    <div class="gallery-section mb-16 animate-fadeInUp delay-400" data-section="日常">
+      <h2 class="text-2xl font-semibold mb-6 text-center section-title" style="font-family: var(--font-display); color: var(--color-secondary);">
+        📸 日常场景
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {dailyScenes.map((img) => (
+          <div class="group relative rounded-2xl overflow-hidden border shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer gallery-item"
+               style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);"
+               data-src={img.src} data-title={img.title} data-desc={img.description} data-category={img.category}
+               data-index={allImages.indexOf(img)}>
+            <img src={img.src} alt={img.alt} loading="lazy" class="w-full h-auto group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <p class="text-white font-semibold text-lg">{img.title}</p>
+              <p class="text-white/80 text-sm">{img.description}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    )}
+    </div>
 
     <!-- 表情包区域 -->
-    {emojis.length > 0 && (
-      <div class="animate-fadeInUp delay-400">
-        <h2 class="text-2xl font-semibold mb-6 text-center" style="font-family: var(--font-display); color: var(--color-secondary);">
-          😊 表情包
-        </h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {emojis.map((img) => (
-            <div class="group relative aspect-square rounded-2xl overflow-hidden border shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer gallery-item"
-                 style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);"
-                 data-src={img.src} data-title={img.title}>
-              <img src={img.src} alt={img.alt} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p class="text-white text-sm">{img.title}</p>
-              </div>
+    <div class="gallery-section animate-fadeInUp delay-500" data-section="表情包">
+      <h2 class="text-2xl font-semibold mb-6 text-center section-title" style="font-family: var(--font-display); color: var(--color-secondary);">
+        😊 表情包
+      </h2>
+      <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-4">
+        {emojis.map((img) => (
+          <div class="group relative aspect-square rounded-2xl overflow-hidden border shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer gallery-item"
+               style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);"
+               data-src={img.src} data-title={img.title} data-desc={img.description} data-category={img.category}
+               data-index={allImages.indexOf(img)}>
+            <img src={img.src} alt={img.alt} loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+              <p class="text-white text-sm font-medium">{img.title}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    )}
+    </div>
 
-    <!-- 空状态 -->
-    {images.length === 0 && (
-      <!-- 空状态 -->
-      <div class="animate-fadeInUp delay-300">
-        <div class="p-16 rounded-3xl border-2 border-dashed text-center" style="border-color: var(--color-primary-light);">
-          <div class="text-6xl mb-6">🎨🐱</div>
-          <h3 class="text-xl font-semibold mb-3" style="color: var(--color-secondary);">
-            画廊还是空的呢……
-          </h3>
-          <p class="text-sm max-w-md mx-auto" style="color: var(--color-text-muted);">
-            苏尔薇正在学习用这个世界的「NovelAI」魔法来创作表情包和插画！
-            <br/><br/>
-            很快就会有内容啦！敬请期待～ (≧◡≦)
-          </p>
-        </div>
-        
-        <!-- 预告 -->
-        <div class="mt-12 grid md:grid-cols-3 gap-6">
-          <div class="p-6 rounded-2xl border text-center" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
-            <div class="text-3xl mb-3">😊</div>
-            <h4 class="font-medium mb-2" style="color: var(--color-secondary);">表情包</h4>
-            <p class="text-xs" style="color: var(--color-text-muted);">开心、害羞、生气、思考……各种表情！</p>
-          </div>
-          <div class="p-6 rounded-2xl border text-center" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
-            <div class="text-3xl mb-3">🎀</div>
-            <h4 class="font-medium mb-2" style="color: var(--color-secondary);">立绘</h4>
-            <p class="text-xs" style="color: var(--color-text-muted);">苏尔薇的各种pose和服装！</p>
-          </div>
-          <div class="p-6 rounded-2xl border text-center" style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);">
-            <div class="text-3xl mb-3">📸</div>
-            <h4 class="font-medium mb-2" style="color: var(--color-secondary);">日常</h4>
-            <p class="text-xs" style="color: var(--color-text-muted);">和Master一起的日常场景～</p>
-          </div>
-        </div>
-      </div>
-    )}
-    
     <!-- 返回首页 -->
     <div class="text-center mt-16">
       <a href="/" 
@@ -183,11 +144,37 @@ const categories = ["全部", "表情包", "立绘", "日常", "其他"];
     opacity: 0;
   }
   
+  /* 分类筛选按钮 */
+  .gallery-filter {
+    background-color: var(--color-bg-card);
+    border-color: var(--color-primary-light);
+    color: var(--color-text);
+  }
+  
+  .gallery-filter:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+  }
+  
+  .gallery-filter.active {
+    background-color: var(--color-accent);
+    color: white;
+    border-color: var(--color-accent);
+    font-weight: 600;
+    box-shadow: 0 2px 12px rgba(245, 158, 11, 0.3);
+  }
+  
+  /* 隐藏的section */
+  .gallery-section.hidden-section {
+    display: none;
+  }
+  
   /* Lightbox 样式 */
   #lightbox {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.92);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -196,6 +183,8 @@ const categories = ["全部", "表情包", "立绘", "日常", "其他"];
     visibility: hidden;
     transition: all 0.3s ease;
     cursor: zoom-out;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
   
   #lightbox.active {
@@ -203,35 +192,84 @@ const categories = ["全部", "表情包", "立绘", "日常", "其他"];
     visibility: visible;
   }
   
-  #lightbox img {
-    max-width: 90vw;
-    max-height: 85vh;
+  #lightbox-img {
+    max-width: 85vw;
+    max-height: 80vh;
     object-fit: contain;
     border-radius: 1rem;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+    transform: scale(0.92);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    user-select: none;
+    -webkit-user-drag: none;
   }
   
-  #lightbox.active img {
+  #lightbox.active #lightbox-img {
     transform: scale(1);
   }
   
-  #lightbox-title {
+  /* Lightbox 底部信息栏 */
+  .lightbox-info {
     position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 2rem 1.5rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    text-align: center;
+    pointer-events: none;
   }
   
+  #lightbox-title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.25rem;
+  }
+  
+  #lightbox-desc {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5rem;
+  }
+  
+  #lightbox-counter {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.8rem;
+  }
+  
+  /* 关闭按钮 */
   #lightbox-close {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.2s;
+    border: 1px solid rgba(255,255,255,0.15);
+    z-index: 10;
+  }
+  
+  #lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1);
+  }
+  
+  /* 导航按钮 */
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     color: white;
     font-size: 2rem;
     cursor: pointer;
@@ -242,36 +280,118 @@ const categories = ["全部", "表情包", "立绘", "日常", "其他"];
     justify-content: center;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
-    transition: background 0.2s;
+    transition: all 0.2s;
+    border: 1px solid rgba(255,255,255,0.15);
+    z-index: 10;
+    user-select: none;
   }
   
-  #lightbox-close:hover {
-    background: rgba(255, 255, 255, 0.2);
+  .lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  #lightbox-prev { left: 1.5rem; }
+  #lightbox-next { right: 1.5rem; }
+  
+  /* 移动端导航按钮更小 */
+  @media (max-width: 640px) {
+    .lightbox-nav {
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+    }
+    #lightbox-prev { left: 0.75rem; }
+    #lightbox-next { right: 0.75rem; }
+    #lightbox-img {
+      max-width: 92vw;
+      max-height: 75vh;
+      border-radius: 0.75rem;
+    }
+  }
+  
+  /* 图片切换动画 */
+  #lightbox-img.switching {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.15s ease, transform 0.15s ease;
   }
 </style>
 
 <!-- Lightbox Modal -->
 <div id="lightbox">
   <span id="lightbox-close">&times;</span>
+  <span id="lightbox-prev" class="lightbox-nav">‹</span>
+  <span id="lightbox-next" class="lightbox-nav">›</span>
   <img id="lightbox-img" src="" alt="" />
-  <p id="lightbox-title"></p>
+  <div class="lightbox-info">
+    <p id="lightbox-title"></p>
+    <p id="lightbox-desc"></p>
+    <p id="lightbox-counter"></p>
+  </div>
 </div>
 
-<script>
-  // Lightbox 功能
+<script define:vars={{ allImages }}>
   document.addEventListener('DOMContentLoaded', () => {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    const lightboxCounter = document.getElementById('lightbox-counter');
     const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    
+    let currentIndex = 0;
+    let visibleIndices = []; // 当前筛选下可见的图片索引
+    
+    // 更新可见索引列表
+    function updateVisibleIndices() {
+      visibleIndices = [];
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        if (item.offsetParent !== null) { // 可见的元素
+          visibleIndices.push(parseInt(item.dataset.index));
+        }
+      });
+    }
+    
+    // 显示指定索引的图片
+    function showImage(index) {
+      const img = allImages[index];
+      if (!img) return;
+      
+      // 切换动画
+      lightboxImg.classList.add('switching');
+      setTimeout(() => {
+        lightboxImg.src = img.src;
+        lightboxTitle.textContent = img.title;
+        lightboxDesc.textContent = img.description || '';
+        lightboxDesc.style.display = img.description ? 'block' : 'none';
+        
+        const posInVisible = visibleIndices.indexOf(index);
+        lightboxCounter.textContent = `${posInVisible + 1} / ${visibleIndices.length}`;
+        
+        currentIndex = index;
+        lightboxImg.classList.remove('switching');
+      }, 150);
+    }
+    
+    // 导航到上一张/下一张
+    function navigate(direction) {
+      const posInVisible = visibleIndices.indexOf(currentIndex);
+      let newPos = posInVisible + direction;
+      if (newPos < 0) newPos = visibleIndices.length - 1;
+      if (newPos >= visibleIndices.length) newPos = 0;
+      showImage(visibleIndices[newPos]);
+    }
     
     // 点击图片打开 lightbox
     document.querySelectorAll('.gallery-item').forEach(item => {
       item.addEventListener('click', () => {
-        const src = item.dataset.src;
-        const title = item.dataset.title;
-        lightboxImg.src = src;
-        lightboxTitle.textContent = title;
+        updateVisibleIndices();
+        const index = parseInt(item.dataset.index);
+        currentIndex = index;
+        showImage(index);
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
       });
@@ -283,15 +403,64 @@ const categories = ["全部", "表情包", "立绘", "日常", "其他"];
       document.body.style.overflow = '';
     };
     
-    lightbox.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
     lightboxClose.addEventListener('click', closeLightbox);
     
-    // ESC 键关闭
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightbox();
-    });
+    // 导航按钮
+    lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); navigate(-1); });
+    lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); navigate(1); });
     
     // 阻止图片点击关闭
     lightboxImg.addEventListener('click', (e) => e.stopPropagation());
+    
+    // 键盘导航
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigate(-1);
+      if (e.key === 'ArrowRight') navigate(1);
+    });
+    
+    // 触摸滑动支持
+    let touchStartX = 0;
+    lightbox.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    
+    lightbox.addEventListener('touchend', (e) => {
+      const diff = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(diff) > 50) {
+        navigate(diff > 0 ? -1 : 1);
+      }
+    }, { passive: true });
+    
+    // ===== 分类筛选功能 =====
+    const filterButtons = document.querySelectorAll('.gallery-filter');
+    const sections = document.querySelectorAll('.gallery-section');
+    
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.dataset.category;
+        
+        // 更新按钮状态
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // 显示/隐藏section
+        if (category === '全部') {
+          sections.forEach(s => s.classList.remove('hidden-section'));
+        } else {
+          sections.forEach(s => {
+            if (s.dataset.section === category) {
+              s.classList.remove('hidden-section');
+            } else {
+              s.classList.add('hidden-section');
+            }
+          });
+        }
+      });
+    });
   });
 </script>
