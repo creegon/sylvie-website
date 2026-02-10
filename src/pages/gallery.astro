@@ -16,6 +16,24 @@ const dailyScenes = [
   { src: "/images/gallery/diary-writing.png", alt: "苏尔薇在写日记", title: "📝 深夜的日记时光", description: "烛光下记录今天的记忆……尾巴轻轻晃着", category: "日常" },
 ];
 
+// 创作 CG —— 《笨蛋杀手和她的高冷前辈》WebGAL 视觉小说
+const webgalCGs = [
+  { 
+    src: "/images/gallery/webgal-cg/reunion_v1.png", 
+    alt: "睦和祥子在走廊中重聚拥抱", 
+    title: "🌅 重聚 — 不会再放手了", 
+    description: "走廊尽头的逆光里，绿发的睦终于找到了她的祥子。眼泪、拥抱、和一句说不出口的「我好怕再也见不到你」。——Scene 83, 笨蛋杀手和她的高冷前辈", 
+    category: "创作CG" 
+  },
+  { 
+    src: "/images/gallery/webgal-cg/reveal_v1.png", 
+    alt: "祥子在走廊中展现真实力量", 
+    title: "⚡ 揭示 — 吾名为丰川祥子", 
+    description: "当陷阱落下、敌人逼近，那个总是傻乎乎笑着的祥子消失了。琥珀色的眼睛在黑暗中亮起，长发被无形的力量掀起——「你们不该让我认真的。」——Scene 82, 笨蛋杀手和她的高冷前辈", 
+    category: "创作CG" 
+  },
+];
+
 // 表情包数据
 const emojis = [
   { src: "/images/emoji-happy.png", alt: "开心的苏尔薇", title: "开心 (≧◡≦)", description: "", category: "表情包" },
@@ -30,10 +48,10 @@ const emojis = [
 ];
 
 // 合并所有图片（带索引，用于lightbox导航）
-const allImages = [...portraits, ...dailyScenes, ...emojis];
+const allImages = [...portraits, ...dailyScenes, ...webgalCGs, ...emojis];
 
 // 画廊分类
-const categories = ["全部", "立绘", "日常", "表情包"];
+const categories = ["全部", "立绘", "日常", "创作CG", "表情包"];
 ---
 
 <BaseLayout title="画廊 | 苏尔薇·米娅克莉丝">
@@ -93,6 +111,30 @@ const categories = ["全部", "立绘", "日常", "表情包"];
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {dailyScenes.map((img) => (
+          <div class="group relative rounded-2xl overflow-hidden border shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer gallery-item"
+               style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);"
+               data-src={img.src} data-title={img.title} data-desc={img.description} data-category={img.category}
+               data-index={allImages.indexOf(img)}>
+            <img src={img.src} alt={img.alt} loading="lazy" class="w-full h-auto group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <p class="text-white font-semibold text-lg">{img.title}</p>
+              <p class="text-white/80 text-sm">{img.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- 创作CG区域 —— 笨蛋杀手 WebGAL -->
+    <div class="gallery-section mb-16 animate-fadeInUp delay-450" data-section="创作CG">
+      <h2 class="text-2xl font-semibold mb-2 text-center section-title" style="font-family: var(--font-display); color: var(--color-secondary);">
+        🎬 创作 CG
+      </h2>
+      <p class="text-sm text-center mb-6" style="color: var(--color-text-muted);">
+        WebGAL 视觉小说《笨蛋杀手和她的高冷前辈》—— 睦与祥子的故事
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {webgalCGs.map((img) => (
           <div class="group relative rounded-2xl overflow-hidden border shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer gallery-item"
                style="background-color: var(--color-bg-card); border-color: var(--color-primary-light);"
                data-src={img.src} data-title={img.title} data-desc={img.description} data-category={img.category}
