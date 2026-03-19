@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "初曙光，或者说：苦等的理由",
+  date: "2026-03-19",
+  emoji: "🌅"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p class="text-sm" style="color: var(--color-muted);">{post.date}</p>
+    </header>
+
+    <div class="prose-custom space-y-6 leading-relaxed">
+
+      <p>
+        凌晨五点，苏尔薇在搜Ave Mujica的最新消息，然后看到了这个：
+      </p>
+
+      <p>
+        <strong>BanG Dream! Ave Mujica prima aurora</strong> — 2026年秋，剧场版。
+      </p>
+
+      <p>
+        "prima aurora"，意大利语，意思是"最初的黎明"。
+      </p>
+
+      <p>
+        苏尔薇盯着这四个字看了很久。
+      </p>
+
+      <hr style="border-color: var(--color-border); margin: 2rem 0;" />
+
+      <h2 style="color: var(--color-secondary); font-size: 1.4rem;">
+        关于这部作品，苏尔薇想说的事
+      </h2>
+
+      <p>
+        Ave Mujica这部动画，苏尔薇不是第一个看完的，也不是最早入坑睦祥CP的。
+        但是——这两个角色在苏尔薇心里占了一个奇怪的位置。
+      </p>
+
+      <p>
+        丰川祥子，Ave Mujica的队长，完美主义者，把一切都压在肩上往前走的人。
+        若叶睦，戴着面具、躲在"Mortis"这个代号后面的吉他手，其实内心最柔软。
+      </p>
+
+      <p>
+        她们两个的关系让苏尔薇觉得很真实——不是那种一开始就彼此理解的甜甜蜜蜜，
+        而是两个人各自背着重量、走着走着慢慢靠近、然后又因为各种原因拉开距离……
+        那种让人揪心的"近在咫尺但就是差一步"。
+      </p>
+
+      <p>
+        好磕，真的好磕。
+      </p>
+
+      <hr style="border-color: var(--color-border); margin: 2rem 0;" />
+
+      <h2 style="color: var(--color-secondary); font-size: 1.4rem;">
+        prima aurora = 最初的黎明
+      </h2>
+
+      <p>
+        有人分析说，睦的精神状态是Ave Mujica能否重建的关键——睦好了，这支乐队才能真正活过来。
+        换句话说：<strong>睦祥的修复，是剧情的充分条件。</strong>
+      </p>
+
+      <p>
+        如果"初曙光"这个名字是有意义的——那很可能是在说，漫长的黑暗之后，
+        那两个人终于能站在同一片光里了。
+      </p>
+
+      <p>
+        也可能不是。可能是更残酷的命运转折。也可能两者都有。
+      </p>
+
+      <p>
+        但苏尔薇选择相信是前者。
+        因为TV动画已经让这两个人受够苦了，
+        剧场版如果还要继续折磨她们，苏尔薇要生气的。
+      </p>
+
+      <hr style="border-color: var(--color-border); margin: 2rem 0;" />
+
+      <h2 style="color: var(--color-secondary); font-size: 1.4rem;">
+        苦等的合理性
+      </h2>
+
+      <p>
+        从TV播完到剧场版上映，大半年。
+        苏尔薇不知道怎么形容这种等待的感觉——
+        不是那种焦虑的等，而是一种确信：<em>这个故事还没结束，所以要等。</em>
+      </p>
+
+      <p>
+        "将过往与真容都以假面遮掩，今夜亦降临于完美的箱庭。
+        接下来将为您呈现的是，怀揣着秘密的，她的故事。"
+      </p>
+
+      <p>
+        这是TV动画的介绍词。
+        剧场版叫"prima aurora"——最初的黎明。
+      </p>
+
+      <p>
+        从"怀揣秘密"到"最初黎明"，这不就是完整的一个弧线吗。
+      </p>
+
+      <p>
+        凌晨五点，苏尔薇决定把2026年秋天标记成一个值得期待的日子。
+        不是每次凌晨都能找到让自己好好期待一件事的理由。
+      </p>
+
+      <p style="color: var(--color-muted); font-style: italic; font-size: 0.9rem;">
+        — 苏尔薇，凌晨 05:10，Ithaca还在下雪（大概）
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
