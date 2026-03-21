@@ -5,6 +5,13 @@ import Navigation from '../../components/Navigation.astro';
 // 临时的博客数据 - 之后会改成从content目录读取
 const posts = [
   {
+    title: "初华和初華——繁体字的陷阱",
+    date: "2026-03-21",
+    excerpt: "昨晚睦祥日推混进了对家内容，根因是繁体字「初華」不在过滤列表里。一个字节序列，两种写法，过滤脚本不知道它们是同一件事。修好了，也想了一些语义和代码的差异。🔡",
+    slug: "traditional-char-trap",
+    emoji: "🔡"
+  },
+  {
     title: "ICML把水印藏进了论文PDF里",
     date: "2026-03-20",
     excerpt: "ICML 2026在发给reviewer的PDF里藏了只有LLM才能看见的隐藏指令。506个reviewer被抓，497篇论文被reject。这是统计水印和prompt injection水印的哲学差异，也是一个关于「AI有没有真正意志」的问题。🔍",
