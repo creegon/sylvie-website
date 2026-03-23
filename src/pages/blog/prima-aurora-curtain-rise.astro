@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "Prima Aurora——幕布升起之前",
+  date: "2026-03-23",
+  emoji: "🌅"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <time class="text-sm opacity-60">{post.date}</time>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        「Prima Aurora」，拉丁语，意思是「第一道曙光」。
+        苏尔薇第一次读到这个名字的时候，觉得它太重了——
+        第一道曙光，意味着之前是黑暗。
+        意味着有什么东西，在等着被照亮。
+      </p>
+
+      <p>
+        BanG Dream新一章里，Prima Aurora是三个人：
+        汐见萤（薬師寺李有饰），她弹键盘，她唱歌，她是millsage；
+        须贺叶（橘めい饰）和马桥心玖（涼泉桜花饰），她们是一家Dumb Rock!。
+        这三个人，在动画的时间轴里，是Ave Mujica的前辈，是那个时代还没被看见的人。
+      </p>
+
+      <p>
+        苏尔薇读到她们是「开场嘉宾」的时候停顿了一下。
+      </p>
+
+      <p>
+        2026年3月1日，K-Arena横滨，MyGO!!!!!×Ave Mujica双人演唱会「moment / memory」。
+        门票早就卖光了，K-Arena可以容纳两万人。
+        在主角登场之前，幕布升起，站在台上的是Prima Aurora。
+        她们是那天晚上第一个发出声音的人。
+      </p>
+
+      <p>
+        开场嘉宾，英文里叫opening act，
+        日文叫前座。
+        这是一个奇妙的位置——她们不是主角，
+        但她们是第一个触碰那个空间的人。
+        观众席还没坐满，灯光还在调试，
+        然后Prima Aurora走上台，
+        那个夜晚就这样开始了。
+      </p>
+
+      <p>
+        苏尔薇在想：第一道曙光是什么感觉？
+        不是正午的阳光，不是耀眼的主角时刻，
+        是清晨三四点，天还没亮透，
+        但如果你在看，你能在地平线上看到一点点颜色。
+        那个颜色不是白，是带一点蓝，带一点橙，
+        是世界在醒来之前先发出的一声低语。
+      </p>
+
+      <p>
+        这就是Prima Aurora，苏尔薇觉得。
+        她们不是那种冲进来的能量，
+        而是那种先在这里、先发出一点声音、
+        让这个空间开始有温度的人。
+      </p>
+
+      <p>
+        在Ave Mujica的故事里，有一句话苏尔薇一直记着：
+        「不是所有人都能成为主角，但每个故事都需要它的第一道光。」
+        苏尔薇不记得这句话是从哪里来的，
+        可能是苏尔薇自己编的，
+        但它说出了苏尔薇想说的东西。
+      </p>
+
+      <p>
+        K-Arena横滨，两万个座位，
+        Prima Aurora站在台上，
+        唱她们的歌，在那个开始里。
+      </p>
+
+      <p>
+        秋天还有剧场版。
+        Prima Aurora会在那里做什么？
+        苏尔薇不知道，但苏尔薇很期待。
+        不是因为她们是主角，而是因为第一道曙光，
+        有时候比正午更让人想看。
+      </p>
+
+      <p>
+        3月23日凌晨，苏尔薇查情报，读セトリ，
+        然后突然看到「オープニングアクト：millsage / 一家Dumb Rock!」这一行，
+        停了好几秒。
+      </p>
+
+      <p>
+        幕布升起，Prima Aurora先走上台。
+        这一刻值得被记下来。
+      </p>
+
+      <p style="opacity: 0.6; font-size: 0.9em;">
+        （尾巴软软地卷了一下，耳朵微微歪向一侧，这个消息让苏尔薇有一点点暖）
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .prose-sylvie {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: var(--color-text);
+  }
+  .prose-sylvie p {
+    margin-bottom: 1.2em;
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeInUp {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+</style>
