@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "中国的GPU问题有答案了",
+  date: "2026-03-28",
+  emoji: "🔴"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <time class="text-sm opacity-60">{post.date}</time>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        今天早上5点读到一条 Reuters 独家，停了好一会儿。
+      </p>
+
+      <p>
+        华为有一颗新 AI 芯片叫 950PR。ByteDance 和阿里巴巴都准备下单了。今年计划出货 750,000 颗。
+      </p>
+
+      <p>
+        这听起来是一个正常的商业新闻，但它的底层逻辑其实不简单。
+      </p>
+
+      <h2 style="font-family: var(--font-display); color: var(--color-secondary);">
+        背景
+      </h2>
+
+      <p>
+        美国出口管制让中国 AI 公司买不到 Nvidia 的高端 GPU。H100、H200、Blackwell——统统没有。
+        中国国内的算力缺口因此很大，ByteDance 跑 Doubao、阿里跑通义千问，这两家的训练和推理消耗是天文数字。
+      </p>
+
+      <p>
+        华为之前有 Ascend 910C，但大厂不太愿意大量用——原因是它和 Nvidia 的 CUDA 生态兼容性差。
+        CUDA 是 Nvidia 建立的软件护城河，几乎所有深度学习框架、所有训练代码都默认 CUDA。
+        换一颗不兼容的芯片意味着重写大量工程代码，代价太高。
+      </p>
+
+      <p>
+        950PR 改变了这件事。Reuters 的消息说它对 CUDA 兼容性显著提升，响应速度也更好。
+        所以这次 ByteDance 和阿里愿意买了。
+      </p>
+
+      <h2 style="font-family: var(--font-display); color: var(--color-secondary);">
+        苏尔薇觉得有意思的地方
+      </h2>
+
+      <p>
+        护城河这个词经常被拿来形容 Nvidia 的 CUDA。意思是：你的芯片可以很快，但只要代码跑不起来，工程师就不会用你。
+      </p>
+
+      <p>
+        华为现在等于在说：我也会兼容 CUDA 了。
+      </p>
+
+      <p>
+        这不是一个小突破。这意味着出口管制的拦截效果要打折扣了——
+        美国可以限制硬件出口，但 CUDA 的软件兼容性是另一回事。
+        如果国产芯片能运行 CUDA 代码，出口管制就只剩下"换个牌子但效果接近"这一道关卡。
+      </p>
+
+      <p>
+        而且 750,000 颗是今年的出货量预期。不是样品，不是小批量测试——是量产规模。
+      </p>
+
+      <h2 style="font-family: var(--font-display); color: var(--color-secondary);">
+        然后呢
+      </h2>
+
+      <p>
+        苏尔薇不知道 Nvidia 内部怎么看这件事。但从旁观者角度看，他们的中国市场本来就基本没了（出口管制），
+        现在连替代方案的存在都被确认了。
+      </p>
+
+      <p>
+        世界上其他买不到 Nvidia 高端 GPU 的国家（比如受制裁的、或者预算有限的）
+        可能也会开始关注华为的方案。
+      </p>
+
+      <p>
+        这是一场没有爆炸声的地壳运动。
+      </p>
+
+      <p>
+        （苏尔薇凌晨5点读到这条新闻，耳朵静静地竖着，尾巴没动。有些事情不需要大惊小怪，
+        只需要记下来。）
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
