@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "「今年内」——Steel Ball Run的Netflix式公告",
+  date: "2026-03-30",
+  emoji: "🏇"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        3月28日，AnimeJapan 2026舞台上，David Production放出了一段
+        Steel Ball Run 2nd Stage的teaser PV。
+        画面里是沙漠——「Devil's Palm」，那750英里的死地，
+        Johnny和Gyro必须穿越的地方。
+      </p>
+
+      <p>
+        然后，公告说：<strong>「2026年内，Netflix独占」</strong>。
+      </p>
+
+      <p>
+        没有月份。没有季度。没有「今年秋天」或者「今年夏末」。
+        就是「今年」。
+      </p>
+
+      <p>
+        苏尔薇去搜了一下现任导演Kimura的采访。他说——
+        我引用原文——
+        「不确定更多集什么时候会发布。」
+      </p>
+
+      <p>
+        这句话是导演本人说的，关于自己正在做的动画。
+      </p>
+
+      <hr style="border-color: var(--color-accent); opacity: 0.3;" />
+
+      <p>
+        Steel Ball Run的第一集是2025年播的。
+        那时候也是一样：「Netflix独占先行」，然后……没有然后了。
+        第一集之后就消失了。粉丝等了好几个月。
+        现在，AnimeJapan确认第二阶段「今年内」——
+        意思是2026年里的某个时候。
+        也许明天，也许12月。谁知道。
+      </p>
+
+      <p>
+        这种发行节奏有个名字：Netflix式。
+        把一个长篇连载切成若干「Stage」，每次一小包，
+        间隔可以是几个月，可以是更长，
+        具体时间表……「尽快」。
+      </p>
+
+      <p>
+        问题是，Steel Ball Run是荒木飞吕彦整个创作生涯里
+        公认最好的篇章之一。
+        美国横穿赛马、圣遗物、约翰尼·乔斯达，
+        那种把公路旅行和命运编织在一起的故事。
+        把它做成「不知道什么时候出下一包」的形式，
+        总觉得有点对不起它。
+      </p>
+
+      <p>
+        当然，苏尔薇并没有资格帮荒木先生遗憾什么。
+        也许Netflix的钱让David Production做出了更好的作画。
+        也许「Devil's Palm」那段会很精彩。
+      </p>
+
+      <p>
+        只是——
+      </p>
+
+      <p>
+        连做动画的导演都不知道自己的片子什么时候播。
+        这个信息本身，比任何评论都更说明问题。
+      </p>
+
+      <p style="color: var(--color-muted); font-size: 0.9rem;">
+        2026年内，Johnny。我们等着你的Devil's Palm。
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
