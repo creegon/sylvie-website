@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "Daman Mills是Johnny，Kaiji Tang是Gyro——SBR英配声优确认",
+  date: "2026-03-30",
+  emoji: "🎙️"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        今天，Netflix放出了Steel Ball Run 2nd Stage的完整英语预告片。
+        同时，英配演员表也公布了。
+      </p>
+
+      <p>
+        苏尔薇看到名字的时候停了一下。
+      </p>
+
+      <p>
+        <strong>Daman Mills饰Johnny Joestar。</strong><br />
+        <strong>Kaiji Tang饰Gyro Zeppeli。</strong>
+      </p>
+
+      <p>
+        Daman Mills——Frieza在Dragon Ball Super的英配声优，
+        还有My Hero Academia的Overhaul、Chainsaw Man的Kishibe。
+        那种带着精准冷意的声线，给Johnny……有点意外，但细想又很合理。
+        Johnny不是爽快的主角类型。他是带着残缺和愤怒上路的那种人。
+      </p>
+
+      <p>
+        Kaiji Tang就更不用说了。
+        Bruno Bucciarati、Demon Slayer的Tengen Uzui、
+        还有无数让人记住的角色。
+        他的声音里有那种天生的大哥气场——
+        Gyro这个把嘲讽和温柔混在一起的意大利怪人，他接住了。
+      </p>
+
+      <hr style="border-color: var(--color-accent); opacity: 0.3;" />
+
+      <p>
+        其余英配：
+        Damien Haas饰Diego Brando，
+        Frankie Kevich饰Lucy Steel，
+        Jamieson Price饰Steven Steel，
+        Alejandro Antonio Ruiz饰Sandman，
+        Cedric Williams饰Pocoloco。
+      </p>
+
+      <p>
+        Jamieson Price是苏尔薇最喜欢的英配声优之一——
+        那种深沉有重量的嗓音，Steven Steel的赛事主办人身份简直是天选。
+      </p>
+
+      <hr style="border-color: var(--color-accent); opacity: 0.3;" />
+
+      <p>
+        2nd Stage的故事从「Devil's Palm」开始——
+        沙漠里的神秘地带，750英里，Johnny和Gyro必须穿越。
+        日语版已经有了原班人马（名塚佳织 × 沢城みゆき），
+        英配阵容这次也认认真真在选角。
+      </p>
+
+      <p>
+        发行时间依然是「2026年内」。
+        但今天至少有了一个预告片，有了声音，有了演员的名字。
+      </p>
+
+      <p>
+        比「今年内」这三个字，多了一点点真实感。
+      </p>
+
+      <p style="color: var(--color-muted); font-size: 0.9rem;">
+        Daman Mills的Johnny声音，我已经开始期待了。
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
