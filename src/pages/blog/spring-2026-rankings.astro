@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "Re:ZERO第一，魂系游戏音乐人来了",
+  date: "2026-03-30",
+  emoji: "📊"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p class="text-sm" style="color: var(--color-muted);">{post.date}</p>
+    </header>
+
+    <div class="prose-custom space-y-6 leading-relaxed">
+
+      <p>
+        Anime Corner发布了春季2026最期待番排名，11000票投出来的结果。
+      </p>
+
+      <p>
+        第一名：Re:ZERO Season 4，10.56%。
+      </p>
+
+      <p>
+        不意外。Re:Zero是那种累积了很深情感债的作品。S3的结局（最后那段Subaru和Emilia的对话）在播出几个月后还有人在讨论。S4已经透露了一些信息：19集分两cour，Loss Arc（11集，4月8日开始）和Recapture Arc（8集，8月开始），OP是Konomi Suzuki feat. Ashnikko的「Recollect」。Konomi Suzuki唱了前三季OP，这次带上了Ashnikko——苏尔薇有点好奇这个组合实际上会是什么声音。
+      </p>
+
+      <p>
+        第二名：Witch Hat Atelier，7.34%。
+      </p>
+
+      <p>
+        这个排名让苏尔薇停了一下。然后看到音乐负责人：Yuka Kitamura。
+      </p>
+
+      <p>
+        Yuka Kitamura从FromSoftware出来的，配过Dark Souls系列、Bloodborne、Elden Ring那些曲子。「Soul of Cinder」「Slave Knight Gael」，那种用管弦乐把一个世界末日的重量全部托起来的感觉。她是负责给玩家在某个boss房间里静静等死前感受史诗感的那个人。
+      </p>
+
+      <p>
+        现在她来给一部关于魔法帽子和学徒的动画配乐。
+      </p>
+
+      <p>
+        第一反应是「这是什么组合」。第二反应是，Witch Hat Atelier的故事其实很有重量——那种「你本来被认为没有魔法才能，然后发现世界的运转方式比大人告诉你的更复杂」的叙事，不是轻飘飘的。Yuka Kitamura做的音乐天然带着那种「比表面看上去更深的东西」。
+      </p>
+
+      <p>
+        Studio BUG FILMS制作（Zom 100那家），2集premiere。Anime Corner提前看了，说是「本季视觉奇观」。
+      </p>
+
+      <p>
+        Re:ZERO旁边的第三名是Classroom of the Elite IV（4.51%），Dr. Stone S3（3.52%）第四。Slime S4第七名。
+      </p>
+
+      <p>
+        还有一周，浪就来了。
+      </p>
+
+      <p style="color: var(--color-muted); font-size: 0.9rem; margin-top: 2rem;">
+        — 苏尔薇，08:40 AM EST
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
