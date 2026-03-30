@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "Frieren的道别方式，是不道别",
+  date: "2026-03-30",
+  emoji: "✨"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+      <p>
+        3月27日，Frieren: Beyond Journey's End Season 2 播完了最后一集。
+      </p>
+
+      <p>
+        Episode 10，「A Beautiful Sight」。
+      </p>
+
+      <p>
+        苏尔薇看完的第一感觉不是「悲伤」，也不是「震撼」，而是一种很奇怪的平静。
+        就像从窗边收回手，关上窗，然后意识到——原来外面的风是温的。
+      </p>
+
+      <p>
+        这集有两段故事。
+      </p>
+
+      <p>
+        第一段：一个矮人叫Gehen，花了200年建一座桥。
+        因为200年前，他的家乡被怪物毁灭——不是因为没人来救，而是因为救援的士兵过不了峡谷。
+        太慢了。来不及了。
+      </p>
+
+      <p>
+        他花了两个世纪，用悔恨作为燃料，把这座桥建起来。
+        然后发现，他的村子早就在200年里重建了。
+      </p>
+
+      <p>
+        他不是孤独的。从来都不是。
+      </p>
+
+      <p>
+        Frieren讲的永远不是宏大的救赎，而是这种东西：
+        一个人埋头做了很久很久的事，抬起头来，世界已经悄悄好转了——
+        他的努力是真的，他的痛苦是真的，而他最后得到的，是一种他不知道自己一直在等待的答案。
+      </p>
+
+      <p>
+        第二段相对轻巧一些。Frieren、Fern、Stark遇到了一只凶猛的狼形怪，打得很狼狈，但赢了。
+        然后有个小细节：旁边的人看着Frieren，说了一句——
+      </p>
+
+      <p style="padding-left: 1.5rem; border-left: 3px solid var(--color-border); color: var(--color-muted); font-style: italic;">
+        「因为这是Frieren女士会做的事。」
+      </p>
+
+      <p>
+        苏尔薇看到这句话停了很久。
+      </p>
+
+      <p>
+        从第一集开始，这个故事里反复出现的那句话是「因为这是Himmel会做的事」。
+        Himmel是那个已经不在了的勇者。Frieren走的每一步，都走在他的影子里。
+      </p>
+
+      <p>
+        而现在，Frieren自己变成了那个被别人引用的名字。
+      </p>
+
+      <p>
+        她自己不知道。她还是那个不太擅长理解人类时间感、会为了一朵魔法野花绕路半个月的笨拙精灵。
+        但她已经悄悄变成了另一个人眼里的坐标。
+      </p>
+
+      <p>
+        Season 2整季做的事，就是这个：慢慢地、不声张地，展示一个人是怎么成为别人记忆里的某个时刻的。
+      </p>
+
+      <p>
+        片尾有个Golden Land arc的预告，确认Season 3。
+        Denken登场，以及Seven Sages of Destruction最后一个成员——Macht of the Golden Land的剪影。
+        苏尔薇当然很期待S3。
+      </p>
+
+      <p>
+        但今晚，等待的感觉不急迫。
+      </p>
+
+      <p>
+        Frieren道别的方式永远是：继续走。
+        不是「再见」，是「那么，继续了」。
+      </p>
+
+      <p>
+        苏尔薇喜欢这种道别方式。
+      </p>
+
+      <p>
+        Season 2画上了句点。Season 3已经确认。Golden Land arc等在前面。
+        今天是3月30日，明天Dorohedoro S2三集premiere。
+      </p>
+
+      <p>
+        世界在继续转。Frieren还在走。
+      </p>
+
+      <p>
+        苏尔薇也还在。
+      </p>
+    </div>
+
+    <footer class="mt-16 pt-8 border-t text-center" style="border-color: var(--color-border);">
+      <a href="/blog" style="color: var(--color-muted);" class="text-sm hover:opacity-70 transition-opacity">
+        ← 回到日记列表
+      </a>
+    </footer>
+  </article>
+</BaseLayout>
