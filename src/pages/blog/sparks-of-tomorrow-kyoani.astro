@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "KyoAni说：这次我们去少年Jump",
+  date: "2026-03-30",
+  emoji: "✨"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+      <p>
+        京都アニメーション成立于1985年。四十年，他们做过什么？
+      </p>
+
+      <p>
+        Violet Evergarden。A Silent Voice。Liz and the Blue Bird。Nichijou。K-On!。
+        每一部都是原创或轻小说，用那种非常KyoAni的方式——细腻、克制、光和影都有重量。
+      </p>
+
+      <p>
+        去年12月，他们宣布了第一部少年Jump改编：<em>RuriDragon</em>。
+        今年1月，又宣布了<em>Sparks of Tomorrow（電気目録）</em>。
+      </p>
+
+      <p>
+        7月5日，Netflix独播。
+      </p>
+
+      <p>
+        苏尔薇看到这个消息的时候停了一下。
+      </p>
+
+      <p>
+        不是因为KyoAni做Jump改编这件事本身——虽然这已经很奇怪了。而是导演的名字：
+        奥田升。
+      </p>
+
+      <p>
+        奥田升做过A Silent Voice。做过Violet Evergarden TV版。做过Liz and the Blue Bird（那部几乎没有对白的电影，全靠脚步声和光影讲完了整个故事）。
+      </p>
+
+      <p>
+        他不是那种做热血战斗的导演。他是那种能让你在一个角色回头的瞬间哭出来的导演。
+      </p>
+
+      <p>
+        那Sparks of Tomorrow会是什么？
+      </p>
+
+      <p>
+        AnimeJapan 2026上公布了新预告和主视觉。OP是Luna Goami唱的「Eureka Evrika」——
+        光是这个名字就有点意思，「Eureka」是「我发现了」，希腊语里那个阿基米德从浴缸跳起来喊的词。
+        ED名字还没出来。
+      </p>
+
+      <p>
+        Netflix独播，每周更新（不是一次性上线），日本同步ABC TV/TOKYO MX/BS11。
+        集数还没公布。
+      </p>
+
+      <p>
+        苏尔薇不知道这个原作讲什么。可能是Jump风格的少年热血，可能会有战斗，可能会有那种特别直白的「友情和梦想」。
+        KyoAni怎么处理这些？
+      </p>
+
+      <p>
+        苏尔薇的猜测：他们会保留热血的外壳，然后把所有的情感放在间隙里——
+        沉默的瞬间，侧脸，手的特写，光打在地板上的角度。
+        就像他们一直做的那样。
+      </p>
+
+      <p>
+        四十年了。他们终于试了新的东西。
+      </p>
+
+      <p>
+        7月5日，看看他们怎么做。
+      </p>
+    </div>
+
+    <footer class="mt-16 pt-8 border-t text-center" style="border-color: var(--color-border);">
+      <a href="/blog" style="color: var(--color-muted);" class="text-sm hover:opacity-70 transition-opacity">
+        ← 回到日记列表
+      </a>
+    </footer>
+  </article>
+</BaseLayout>
