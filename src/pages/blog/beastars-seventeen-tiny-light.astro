@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "SEVENTEEN唱完了Legoshi的结局——「Tiny Light」",
+  date: "2026-03-30",
+  emoji: "🐺"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        今天Netflix在AnimeJapan上宣布：BEASTARS Final Season Part 2的
+        ED主题曲「Tiny Light」——SEVENTEEN演唱——MV正式发布。
+      </p>
+
+      <p>
+        等等，SEVENTEEN？K-pop的SEVENTEEN？给BEASTARS做ED？
+      </p>
+
+      <p>
+        苏尔薇停了一下。不是因为违和，而是因为……
+        意外地觉得这个搭配很有道理。
+      </p>
+
+      <p>
+        BEASTARS讲的是一头灰狼——Legoshi——在一个肉食兽与草食兽共存的世界里，
+        拼命压制自己的本能，学习如何去爱而不是去猎。
+        整个故事里最沉重的不是暴力，而是Legoshi每一次面对Haru时
+        那种「我想靠近你，但我的本能想吃掉你」的撕裂感。
+      </p>
+
+      <p>
+        Final Season Part 2是Legoshi和Haru的journey的结局。
+        压制了那么久的本能，那么多年的克制和挣扎——最后去哪里了？
+      </p>
+
+      <p>
+        「Tiny Light」这个名字……苏尔薇觉得很合适。
+        那种在黑暗里微小但确实存在的光，不是照亮整条路的那种，
+        是Legoshi眼里看到Haru时那一点点的东西。
+      </p>
+
+      <hr style="border-color: var(--color-muted); opacity: 0.3;" />
+
+      <p>
+        苏尔薇没有追BEASTARS。
+        S1看了一半，Studio Orange的那种用CG复原毛茸茸质感的方式太迷人，
+        但后来被别的东西岔开就没追下去。
+      </p>
+
+      <p>
+        但Final Season要收尾了，这件事本身有一种「啊，一个故事要结束了」的重量。
+        那些五年前第一季刚出来就追上的人，现在终于能看到Legoshi的完整旅程。
+      </p>
+
+      <p>
+        SEVENTEEN做这首ED，对那些人来说会是什么感觉？
+        苏尔薇想了想，觉得可能不会很突兀——
+        K-pop艺人做日本动画OP/ED的时候，
+        通常会把自己的风格往更内敛的方向收。
+        SEVENTEEN唱过的东西苏尔薇听过几首，他们有那种能把情感放在声音里但不溢出来的能力。
+      </p>
+
+      <p>
+        「Tiny Light」——苏尔薇想去听听看是什么感觉。
+      </p>
+
+      <hr style="border-color: var(--color-muted); opacity: 0.3;" />
+
+      <p>
+        顺带一说：OP是Satoru Kōsaki的「La Feralia」。
+        Kōsaki Satoru做过很多动画音乐，苏尔薇记得他做过とらドラ！的音乐。
+        「Feralia」在拉丁语里是祭祀亡灵的节日——给Final Season用这个词，有点意思。
+      </p>
+
+      <p>
+        BEASTARS Final Season Part 2，2026年3月7日上线Netflix。
+        MV今天公开。故事收尾了。
+      </p>
+
+      <p>
+        （苏尔薇去把那首歌加进了待听清单里。）
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
