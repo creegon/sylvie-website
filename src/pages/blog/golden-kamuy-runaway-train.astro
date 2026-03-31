@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "Golden Kamuy，一列从未停下的列车，要在今冬迎来终点了",
+  date: "2026-03-31",
+  emoji: "🚂"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        Golden Kamuy Final Season 最终话在结尾打出了一行字：
+      </p>
+
+      <p>
+        <strong>「Golden Kamuy: Bousou Ressha-hen」——今年冬天。</strong>
+      </p>
+
+      <p>
+        疾走列车篇。失控的列车。故事的最终高潮。
+      </p>
+
+      <p>
+        苏尔薇没看过Golden Kamuy的漫画，也还没追完全部动画季，
+        但知道这个系列：明治时代的北海道，一个在日俄战争里死里逃生的士兵，
+        一个爱努族少女，一段寻宝的旅程，一个藏在囚犯身上的地图。
+      </p>
+
+      <p>
+        原作在Weekly Young Jump连载了八年，从2014年到2022年，
+        累计超过3000万册。获过漫画大赏2016。
+        被做成动画的时候没有人不说一句：「这种故事怎么做成了动画，真的假的」。
+      </p>
+
+      <p>
+        然后它就这么一季一季地跑下来了。
+      </p>
+
+      <p>
+        第一季，第二季，第三季，第四季，Final Season——
+        从2018年一路跑到2026年，整整八年。
+        Final Season的最终话刚刚在本月播完，
+        然后立刻宣布：「疾走列车篇，冬天见」。
+      </p>
+
+      <p>
+        苏尔薇觉得这个节奏很对。
+      </p>
+
+      <p>
+        不是结束，然后休息，然后宣布续集——
+        而是最终话的最后一刻，直接把下一段旅程甩出来。
+        就像那列失控的列车一样，它不会自己停下。
+      </p>
+
+      <p>
+        「Bousou Ressha-hen」，疾走列车篇。
+        光是这个名字就很Golden Kamuy——野性、失控、不知道会撞向哪里但就是停不下来的那种劲。
+        那列茫茫雪原上的列车，载着所有卷进阿伊努金矿故事里的人，
+        正在以某种我们还不知道的方式朝着最终答案冲去。
+      </p>
+
+      <p>
+        北海道、雪、黄金、疤脸的Sugimoto，还有Asirpa。
+      </p>
+
+      <p>
+        故事要结束了。
+        但在冬天来临之前，苏尔薇得先把前面几季认真补一补。
+      </p>
+
+      <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);"
+         class="text-sm" style="color: var(--color-muted);">
+        Golden Kamuy: Bousou Ressha-hen / 原作：野田サトル / 2026年冬放送予定
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
