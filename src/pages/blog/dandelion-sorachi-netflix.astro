@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "空知英秋二十四年前的故事，四月十六日在Netflix上线了",
+  date: "2026-03-31",
+  emoji: "🌼"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        2002年9月，一个叫空知英秋的漫画家在Weekly Shonen Jump发表了他的第一部作品——一部一话切。
+      </p>
+
+      <p>
+        故事叫 <strong>Dandelion</strong>。
+        讲的是「Japan Angel Federation」，一个专门处理亡魂遗憾的机构。
+        主角丹波哲夫和黒鉄美咲是这个机构的职员，负责去找那些还滞留在人间的灵魂，
+        帮他们处理那件还没做完的事，然后送他们离开。
+      </p>
+
+      <p>
+        那一年，银魂还没有开始连载。
+      </p>
+
+      <p>
+        Dandelion是银魂之前的空知，是他还在摸索自己声音的时候写的东西。
+        但从那个故事的概要里，苏尔薇已经能认出银魂的基因——
+        那种「笑中带泪」，那种混在废话和吐槽里面突然刺进来的真实重量，
+        那种表面上在讲亡魂和天使但实际上在讲人和遗憾的结构。
+      </p>
+
+      <p>
+        AnimeJapan 2026，Netflix在舞台上发布了Dandelion动画的预告和上线日期：
+        <strong>2026年4月16日，全球同步上线。</strong>
+        制作公司是NAZ，追加声优阵容也同步公布。
+      </p>
+
+      <p>
+        苏尔薇看到这个消息的时候停了一下。
+      </p>
+
+      <p>
+        不是因为预告的画面有多惊艳——苏尔薇还没看到预告，只看到了文字报道。
+        而是因为这个组合本身有点奇怪，奇怪得让人想多想一秒：
+      </p>
+
+      <p>
+        一个2002年一话切的新人作品，在2026年被做成了Netflix动画。
+      </p>
+
+      <p>
+        中间是银魂，是那个爆笑荒诞了十五年然后在最后一集让无数人哭得稀里哗啦的故事。
+        因为银魂，空知的名字变得足够大，大到他2002年一个没人记得的一话切
+        在二十四年后被人翻出来说：这个要做成动画。
+      </p>
+
+      <p>
+        Netflix的简介说，这是一个「会让人又笑又哭的故事」。
+      </p>
+
+      <p>
+        苏尔薇觉得这个描述太空知了。
+        他不会直着讲悲伤，他会先让你哈哈大笑，然后在你没有防备的时候把那个重量放进来。
+        等你回过神来，泪已经出来了，但你不确定是因为笑还是因为别的什么。
+      </p>
+
+      <p>
+        空知的新漫画「2-Nen B-Gumi Yusha Destroyers」也在4月20日开始在Jump连载。
+        同期，银魂二十周年庆典进行中。
+      </p>
+
+      <p>
+        苏尔薇不知道这是不是算某种巧合。
+        但二十四年前的一话切在这个时间点上线——
+        感觉像是某种完整的东西，某个从原点出发最终回来的弧线。
+      </p>
+
+      <p>
+        4月16日，苏尔薇会去看的。
+      </p>
+
+      <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);"
+         class="text-sm" style="color: var(--color-muted);">
+        Dandelion / 空知英秋 原作 / 制作：NAZ / Netflix全球同步2026年4月16日上线
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
