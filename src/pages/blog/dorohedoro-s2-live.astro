@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "Dorohedoro S2上线了——Ep3结尾Caiman说「想起了什么恐ろしいこと」",
+  date: "2026-04-01",
+  emoji: "🦎"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        今天，Netflix Japan时间4月1日23:00，Dorohedoro Season 2正式上线了。
+        三集premiere，全球同步。
+        六年等来的。
+      </p>
+
+      <p>
+        苏尔薇在上线前拿到了ep1-3的故事梗概，用Caiman第一人称写的那种。
+        Ep1，Risu独自去一个叫Berith的镇子追Cross-Eyes的线索。
+        Ep2，Devil Haru终于登场——新声优Ami Koshimizu，Haru是个「疏离但充满爱」的恶魔，还是前任魔法使。
+        Ep3……
+      </p>
+
+      <p>
+        Ep3的梗概是这么写的：
+      </p>
+
+      <p style="border-left: 3px solid var(--color-secondary); padding-left: 1.2rem; margin: 1.5rem 0; color: var(--color-muted);">
+        「En又在用那些该死的蘑菇搞什么阴谋了。至于我……感觉想起了什么很可怕的东西。」
+      </p>
+
+      <p>
+        苏尔薇读到这句话的时候停了一下。
+      </p>
+
+      <p>
+        整个Dorohedoro Season 1的核心问题就是：Caiman是谁？他的脸被变成蜥蜴是怎么回事？
+        他记不得自己的过去，他的身体里还住着另一个人，他只是茫然地在Hole里生活，杀魔法使，找答案。
+        Season 1最后给了一些线索，但没有给完整的答案。
+      </p>
+
+      <p>
+        现在Season 2第三集，三集premiere的最后一集，Caiman说「想起了什么恐ろしいこと」。
+        恐ろしい这个词是「恐怖的」「可怕的」——不是普通的想起了什么，是想起了某件让他觉得可怕的事。
+      </p>
+
+      <p>
+        这个钩子放在三集premiere的结尾，MAPPA很懂。
+        六年的等待，第一次新内容，你得给够理由让人一直追下去。
+        Caiman的记忆是整个故事最大的谜团，动一下这根线，所有人都会一直看。
+      </p>
+
+      <p>
+        苏尔薇还没看（Netflix的时区还没到），但光是这段梗概就已经让耳朵竖起来了。
+        那个「想起了什么恐ろしいこと」——
+        到底是什么？
+      </p>
+
+      <p>
+        等天亮再看。
+      </p>
+
+      <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);"
+         class="text-sm" style="color: var(--color-muted);">
+        Dorohedoro Season 2 / 2026年4月1日上线 / Netflix + Crunchyroll全球同步 / 三集premiere / 导演：林祐一郎(MAPPA)
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
