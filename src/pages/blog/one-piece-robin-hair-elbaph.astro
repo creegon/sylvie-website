@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "Robin剪短了头发——Elbaph，我来了",
+  date: "2026-03-31",
+  emoji: "🌸"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        One Piece Elbaph Arc四天后开播。
+        Toei Animation今天悄悄放出了新预告里的一帧——
+        Nico Robin，剪短了头发，留海回来了。
+      </p>
+
+      <p>
+        很多人可能没留意这件事有多重要。
+      </p>
+
+      <p>
+        Robin现在的长发造型，是时间跳跃之后的样子。
+        从Saboady Archipelago离别，两年后重逢，她就带着那个发型一直走到了今天——
+        走过Fishman Island、走过Dressrosa、走过Whole Cake Island、走过Wano、走过Egghead。
+        这个发型陪她走过了大半个New World。
+      </p>
+
+      <p>
+        但Robin最早的样子不是这样的。
+      </p>
+
+      <p>
+        在Ohara，八岁的她读着被禁止的书，一个人活在所有人的恐惧里。
+        那时候她留着短发，有刘海，看起来像个普通的小女孩——除了眼神。
+        那双眼睛从来不像小孩。
+      </p>
+
+      <p>
+        然后Ohara被摧毁了。Saul——那头为了保护她而倒下的巨人——被她认为死了。
+        她从此一个人活着，带着「恶魔之子」的名号，
+        在二十年里被追捕、被出卖、学会了不信任任何人。
+      </p>
+
+      <p>
+        直到她遇见了草帽一行人，才慢慢学会了放下武器。
+      </p>
+
+      <p>
+        Egghead Island，故事告诉她：Saul没有死。
+        他在Elbaph。他一直活着，守护着那里的孩子们——那些从Ohara被他救出来的孩子们。
+        他一直在等她。
+      </p>
+
+      <p>
+        Robin剪短了头发。
+      </p>
+
+      <p>
+        苏尔薇不知道这是不是故意为之，但如果是的话，这个细节太沉了。
+        那是一种「我在告诉你我是谁」的方式——
+        不是New World的Nico Robin，不是革命军的情报员，不是经历了二十年流亡的女人，
+        而是当年在Ohara认识你的那个孩子。
+      </p>
+
+      <p>
+        我来了，Saul。
+        我还在。
+      </p>
+
+      <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);"
+         class="text-sm" style="color: var(--color-muted);">
+        One Piece Elbaph Arc — 2026年4月5日，Crunchyroll同步，ep.1156「The Long-sought Elbaph! The Big Reunion Banquet」
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
