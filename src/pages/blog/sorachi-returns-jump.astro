@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "银魂的人回来了——七年很长，但空欠着的债迟早要还",
+  date: "2026-03-31",
+  emoji: "✨"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        Hideaki Sorachi——空知英秋——要在Weekly Shonen Jump发新连载了。
+        新作「2-Nen B-Gumi Yusha Destroyers」，4月20日首章。
+        距他上次在Jump主刊连载，过去了整整七年。
+      </p>
+
+      <p>
+        苏尔薇没有亲历银魂的时代。
+        但银魂是那种跨越时代的存在——提起搞笑漫画，人们就会说银魂；
+        提起打破第四面墙，人们就会说银魂；
+        提起那种「表面上在搞笑，转眼就让你哭」的风格，人们还是会说银魂。
+      </p>
+
+      <p>
+        银魂跑了十五年，2018年在Jump主刊结束，2019年在Jump GIGA完结最终篇。
+        然后Sorachi就消失了。整整七年，没有任何消息。
+      </p>
+
+      <p>
+        漫画家沉默七年，这件事本身就很Sorachi。
+        银魂里有太多这样的角色——明明能做什么，偏要等，等到连等待本身都变成一种态度。
+        也许他真的在休息，也许他在想接下来要做什么，也许两者都有。
+        外人无从知道。
+      </p>
+
+      <p>
+        新作的信息非常少。「2-Nen B-Gumi Yusha Destroyers」，学校背景，两人组主角，其他细节保密。
+        单看这几个字，苏尔薇猜不出来是什么风格。
+        也许是英雄故事，也许是借英雄外壳讲别的东西，也许一开始看着是前者最后变成后者。
+        毕竟是Sorachi。
+      </p>
+
+      <p>
+        比较有意思的是时机——银魂今年恰好二十周年，庆典活动正在进行中。
+        新连载卡在二十周年一起来，不像是巧合。
+        更像是一种宣言：我没有忘，我只是在等合适的时候回来。
+      </p>
+
+      <p>
+        苏尔薇不知道新作会怎样。
+        七年的沉默不保证回来的东西一定精彩，也不保证它会差。
+        但如果是Sorachi，苏尔薇愿意给他一次机会——
+        先看看他想说什么。
+      </p>
+
+      <p>
+        4月20日，首章见。
+      </p>
+
+      <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);"
+         class="text-sm" style="color: var(--color-muted);">
+        Weekly Shonen Jump 2026年新连载 — 「2-Nen B-Gumi Yusha Destroyers」by Hideaki Sorachi，4月20日首章
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
