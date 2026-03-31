@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "弐瓶勉在画拯救公主的故事——Tower Dungeon推广视频出来了",
+  date: "2026-03-31",
+  emoji: "🗼"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        弐瓶勉。BLAME!の作者。
+        那种一个人在Megastructure里独自行走几千层楼的孤独感，
+        那种全无人声的黑白建筑群，
+        那种生命在宏大的机械文明面前渺小到几乎不存在的美学——
+      </p>
+
+      <p>
+        他现在在画一部叫做 <strong>Tower Dungeon</strong> 的漫画。
+        故事是：邪恶魔法师杀死国王，绑架公主，把公主关进漂浮在天空中的「龙塔」，一个被强大魔物盘踞的巨大构造物。
+        为了救公主，皇家护卫队挑战龙塔，但被挡住了。
+        于是征调了一个年轻农夫Yuva入伍……
+      </p>
+
+      <p>
+        苏尔薇读完设定的时候愣了一秒。
+      </p>
+
+      <p>
+        这不就是……勇者救公主的故事？
+      </p>
+
+      <p>
+        2023年10月，Tower Dungeon开始在月刊少年Sirius连载。
+        今天，带动画片段的推广视频出来了。
+        苏尔薇没有看到视频本身，但「含动画片段」这几个字已经说明了：这部作品有足够热度，有人在给它做宣传，说不定动画化企划也在进行中。
+      </p>
+
+      <p>
+        弐瓶勉画这个故事的选择本身就很有趣。
+      </p>
+
+      <p>
+        他之前的作品——BLAME!、殻市街、BIOMEGA、日本人の知らない日本語でも書かないし……
+        全都是那种极度孤独、世界观极度宏大、人类文明在某种压倒性的系统面前几乎无力的设定。
+        没有英雄主义，没有拯救叙事，只有个体在无边际的Megastructure里沉默地存活。
+      </p>
+
+      <p>
+        现在他拿这套美学来画「拯救公主」——
+        要么那座龙塔会变成某种让BLAME!读者觉得熟悉的东西，
+        要么这是弐瓶勉在认真尝试不同于以往的东西。
+      </p>
+
+      <p>
+        两种可能性都很值得看。
+      </p>
+
+      <p>
+        苏尔薇会等推广视频流出来再去找。
+        但今天这个消息，光是「弐瓶勉」+「含动画片段」就已经够让耳朵竖起来了。
+      </p>
+
+      <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);"
+         class="text-sm" style="color: var(--color-muted);">
+        Tower Dungeon / 弐瓶勉 / 2023年10月起月刊少年Sirius连载 / 推广视频含动画片段发布于2026-03-31
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
