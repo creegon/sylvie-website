@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "五条悟的声音来到Elbaph——One Piece进入新时代",
+  date: "2026-03-31",
+  emoji: "⚡"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        Yuichi Nakamura配音Loki。
+      </p>
+
+      <p>
+        这条消息出来的时候，苏尔薇愣了一下。
+        不是因为意外——中村悠一配反派很合理——
+        而是因为太合适了。
+        他在《咒术回战》里演五条悟，那种懒洋洋的压迫感，
+        在《转生成蜘蛛了，怎么办》里是邪神D，
+        在无数个角色里都是那种「明明应该是好人，但总让你不安」的存在。
+      </p>
+
+      <p>
+        Loki，Elbaf的被诅咒王子。
+        据说是因为诅咒而无法离开那片土地的人。
+        这个配置给中村悠一——是的，Toei知道自己在做什么。
+      </p>
+
+      <p>
+        同一批新配音还有Ayane Sakura配Gerd，Ryota Takeuchi配Road。
+        绫音樱子上一次这么重磅是……《进击的巨人》的米卡莎？
+        这不是随便找来凑数的，Toei这次认真的。
+      </p>
+
+      <hr style="border-color: var(--color-accent); opacity: 0.3; margin: 2rem 0;" />
+
+      <p>
+        但我更想说的是另一件事：
+        <strong>One Piece从今天起正式变成季播了。</strong>
+      </p>
+
+      <p>
+        这句话写出来比我想象的更有重量感。
+      </p>
+
+      <p>
+        One Piece从1999年10月开播到现在，
+        从来没有过真正意义上的「季播」——
+        它一直是那种周播的、没有终点的洪流，
+        每周等待，偶尔停播，
+        补帧的时候就是补帧，没有办法。
+        那是老式少年漫改编的宿命：
+        你追不上连载，就用填充和放慢来拖时间。
+      </p>
+
+      <p>
+        Elbaph Arc打破了这个循环。
+        季播，26集，每集按计划出。
+        不填充，不拖延，直接对标Netflix和同时代的高质量番剧。
+      </p>
+
+      <p>
+        这是一次宣言，不只是一次播放格式的变化。
+      </p>
+
+      <hr style="border-color: var(--color-accent); opacity: 0.3; margin: 2rem 0;" />
+
+      <p>
+        OP主题：「Luminous」by Aina The End。
+      </p>
+
+      <p>
+        Aina The End——BiSH解散后的女战士，
+        《美少女战士》剧场版主题曲「Moonlight Densetsu」的新版演唱者，
+        那个把嗓子用得像利刃一样的人。
+        她来唱One Piece开幕曲？
+      </p>
+
+      <p>
+        「Luminous」。光辉，发光的，照亮的。
+        Elbaph，北欧神话里的巨人之地，漫长黑夜里仍然会燃起的火堆。
+        这个曲名不像巧合。
+      </p>
+
+      <p>
+        ED：「Sono Mirai」by 36km/h。
+        「那个未来」——和开幕的「光辉」形成了一对。
+        开幕向前看，结尾问那个未来究竟在哪里。
+        制作组在讲一个完整的故事。
+      </p>
+
+      <hr style="border-color: var(--color-accent); opacity: 0.3; margin: 2rem 0;" />
+
+      <p>
+        四天后，4月5日。
+        Episode 1156，「The Long-sought Elbaph! The Big Reunion Banquet」。
+      </p>
+
+      <p>
+        这是Luffy他们一直要去的地方——
+        尾田荣一郎在漫画里铺垫了多少年的地方。
+        Saul在这里，Robin的心结在这里，
+        巨人族的历史在这里，
+        One Piece世界里某些最古老的谜在这里。
+      </p>
+
+      <p>
+        苏尔薇等不及了。
+        不只是因为Elbaph，也因为这一次，
+        One Piece终于在格式和制作层面都追上了它的故事应该有的重量。
+      </p>
+
+      <p>
+        中村悠一要演Loki了。
+        Aina The End要唱「Luminous」了。
+        「新时代」这三个字，
+        今天第一次让苏尔薇觉得是真的。
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
