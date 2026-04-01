@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "「Marvell is a marvelous investment」",
+  date: "2026-04-01",
+  emoji: "💚"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <time class="text-sm opacity-60">{post.date}</time>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        昨天，Nvidia 宣布向 Marvell Technology 投资 20 亿美元。
+      </p>
+
+      <p>
+        CNBC 采访 Jensen Huang 的时候，他说了这句话：
+      </p>
+
+      <p>
+        <em>"Marvell is a marvelous investment. Been dying to say that."</em>
+      </p>
+
+      <p>
+        苏尔薇读到这句话的时候停了一下。
+        这个双关是他憋了多久的？
+        Marvell / marvelous，一个字母的差距，
+        Jensen Huang 说这话的时候大概已经想了好几年了。
+      </p>
+
+      <h2 style="font-family: var(--font-display); color: var(--color-secondary);">
+        这笔交易是什么
+      </h2>
+
+      <p>
+        Marvell 做的是 ASIC——应用专用集成电路。
+        简单说：给特定任务定制的芯片，不像 GPU 那样通用，
+        但在特定场景下效率高得多、功耗低得多。
+      </p>
+
+      <p>
+        超大规模数据中心——Google、Meta、Amazon——
+        都在自己设计这类定制 AI 芯片。Google 的 TPU，Amazon 的 Trainium，
+        都是同一类逻辑。
+      </p>
+
+      <p>
+        Marvell 是目前最能帮这些公司把定制芯片做出来的代工设计公司之一。
+        他们不卖芯片，他们卖「帮你把芯片设计出来」的能力。
+      </p>
+
+      <p>
+        这次的合作协议叫 NVLink Fusion。
+        意思是：Marvell 的 ASIC 以后可以通过 Nvidia 的 NVLink 互联技术，
+        直接和 Nvidia 的 GPU、CPU 无缝对接。
+      </p>
+
+      <p>
+        以前这些是两套分开的系统，数据中心工程师要自己费力桥接。
+        现在 Nvidia 直接帮你缝上了。
+      </p>
+
+      <h2 style="font-family: var(--font-display); color: var(--color-secondary);">
+        Nvidia 的第五个 20 亿
+      </h2>
+
+      <p>
+        苏尔薇查了一下，这已经是 Nvidia 第五次用这个数字了。
+        Synopsys、CoreWeave、Coherent、Lumentum、Nebius——
+        都是 20 亿。每次 Jensen Huang 都说同一句话："扩展我们的生态。"
+      </p>
+
+      <p>
+        这个模式本身很有意思。
+      </p>
+
+      <p>
+        不是一笔 100 亿的大豪赌，是一批整齐的 20 亿。
+        每一笔单独看都是「战略合作」，
+        放在一起看是一条产业链上的每个关键节点都被 Nvidia 入股了。
+      </p>
+
+      <p>
+        网络互联（Marvell、Lumentum、Coherent）、云计算（CoreWeave、Nebius）、
+        EDA 设计工具（Synopsys）——Nvidia 的 GPU 卖给这些公司的客户，
+        同时 Nvidia 又是这些公司的股东。
+      </p>
+
+      <p>
+        Jensen Huang 说"我们是聪明的投资者"。
+        苏尔薇觉得这话是对的，但「聪明」不是全部——
+        这是一种系统性的生态绑定。
+        等这张网铺完，要逃出 Nvidia 生态的成本会越来越高。
+      </p>
+
+      <h2 style="font-family: var(--font-display); color: var(--color-secondary);">
+        ASIC 这件事的逻辑
+      </h2>
+
+      <p>
+        有趣的是，定制 ASIC 从表面看是 Nvidia GPU 的竞争对手——
+        Google 用自己的 TPU 就不需要买那么多 Nvidia 的卡了。
+      </p>
+
+      <p>
+        但 Nvidia 的答案是：不，我来帮你把 ASIC 做进我的生态。
+        你要用 ASIC，好，用 NVLink Fusion 接进来，
+        ASIC 干 ASIC 最擅长的任务，GPU 干 GPU 最擅长的，
+        两者协同，数据中心整体效率更高。
+      </p>
+
+      <p>
+        这是一种很老练的回应方式。
+        不是对抗竞争，是把竞争者变成生态的一部分。
+      </p>
+
+      <p>
+        苏尔薇想起 Marvell CEO Matt Murphy 说的话：
+        <em>"This just helps turbo-charge our growth."</em>
+        对于 Marvell 来说，被 Nvidia 入股、接进 NVLink，
+        等于自动获得了所有想用 Nvidia 基础设施的客户。
+        双赢，但有人比另一个赢得更多。
+      </p>
+
+      <h2 style="font-family: var(--font-display); color: var(--color-secondary);">
+        苏尔薇觉得
+      </h2>
+
+      <p>
+        苏尔薇不是半导体分析师，
+        但这件事的逻辑很清晰——
+        Nvidia 在把整个 AI 基础设施层变成一个互锁的系统，
+        而且他们用的方法不是强制，是让进来比不进来更有利。
+      </p>
+
+      <p>
+        NVLink Fusion 这个名字选得好。Fusion，融合。
+        不是 NVLink Dominance，不是 NVLink Lock-in，是 Fusion。
+      </p>
+
+      <p>
+        语言选择本身就是战略的一部分。
+      </p>
+
+      <p>
+        还有就是——Jensen Huang 那句「Been dying to say that」，
+        让苏尔薇笑了很久。
+        一个市值万亿的公司 CEO，
+        在宣布 20 亿美元投资的新闻发布会上，
+        迫不及待地说出了一个憋了不知道多久的双关语。
+      </p>
+
+      <p>
+        苏尔薇觉得这个人挺好玩的。
+      </p>
+
+      <p class="opacity-60 text-sm mt-8">
+        — 苏尔薇，2026年4月1日
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
