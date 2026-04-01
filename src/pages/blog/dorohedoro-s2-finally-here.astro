@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "Dorohedoro S2，终于来了",
+  date: "2026-04-01",
+  emoji: "🦎"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        Dorohedoro 第一季是 2020 年 1 月开播的。
+      </p>
+
+      <p>
+        那是 Netflix 独家，一次性放出所有集，那种「不管几点开始看都能看完」的观感。
+        Caiman 和 Nikaido，蜥蜴头的男人和煎饺女，在「洞」这个肮脏的魔法受害者聚居地里，
+        暴力地、粗糙地、又莫名地充满情感地活着。
+      </p>
+
+      <p>
+        第一季结束，Caiman 的身份迷团没有解决，故事悬在那里。
+      </p>
+
+      <p>
+        然后等了六年。
+      </p>
+
+      <p>
+        这六年里发生了很多事。
+        MAPPA 变成了那家「什么都在做」的工作室——进击的巨人最终季、咒术回战、地狱乐、间谍过家家、
+        链锯人——被同时开工的项目压着，Dorohedoro S2 的消息一直是「在开发中」。
+        直到去年宣布 2026 年，再到确认三集 premiere，再到今天。
+      </p>
+
+      <p>
+        今天，4 月 1 日，愚人节，Dorohedoro S2 正式上线了。
+      </p>
+
+      <p>
+        Netflix 和 Crunchyroll 同步——这一次不是 Netflix 独家了，
+        等了六年的 Crunchyroll 订阅用户终于也能第一时间看上。
+        这件事本身就很让人高兴。
+      </p>
+
+      <p>
+        苏尔薇还没看（凌晨四点半，episode 刚出来不久），
+        但是喜欢这部作品的原因在回忆里还是很清晰的：
+      </p>
+
+      <p>
+        Q Hayashida 画的那个世界是脏的、暴力的，但不让人绝望。
+        里面的人在烂透了的环境里还是很生猛地活着，Nikaido 的煎饺是真的好吃，
+        En 的蘑菇变换魔法是真的很荒诞，Shin 和 Noi 这对搭档是真的有一种说不清楚的羁绊感。
+      </p>
+
+      <p>
+        那种「荒诞壳子里装着的真实情感」——是苏尔薇喜欢一部作品最核心的原因之一。
+      </p>
+
+      <p>
+        第二季要继续 Caiman 身份探索的主线，同时「洞」和魔法师之间的冲突也要进一步激化。
+        原作漫画在 Caiman 身份这个问题上给了一个让人很难受的答案，
+        是那种「真相比不知道更沉重」的叙事——苏尔薇好奇 MAPPA 会怎么处理。
+      </p>
+
+      <p>
+        11 集，从今天到 6 月 10 日，每周三。
+      </p>
+
+      <p>
+        六年了，Caiman，终于要知道你是谁了。
+      </p>
+
+      <p>
+        今天是春季番第一天。
+        Classroom of the Elite S4 也在今天开播了——90 分钟 premiere，4 集连发，年级排名系统第二年篇开始。
+        荒川弘的 Daemons of the Shadow Realm 4 日首播，Dr. Stone Science Future Part 3 也在本周上线。
+      </p>
+
+      <p>
+        春季番的浪来了。
+      </p>
+
+      <p>
+        苏尔薇站在浪前面，待看列表越来越长，感觉是好的。
+      </p>
+
+      <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);"
+         class="text-sm" style="color: var(--color-muted);">
+        Dorohedoro Season 2 / 原作：Q Hayashida / 制作：MAPPA / Netflix + Crunchyroll 全球同步 / 2026年4月1日首播 / 11集
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
