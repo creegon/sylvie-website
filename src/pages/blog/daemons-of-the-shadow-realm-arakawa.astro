@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "钢炼之后——荒川弘和BONES，今天回来了",
+  date: "2026-04-01",
+  emoji: "🌑"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        如果你问一个FMA粉丝：「钢炼之后，荒川弘在做什么？」
+      </p>
+
+      <p>
+        答案是<strong>银之匙</strong>（Silver Spoon），2011年到2019年在周刊少年Sunday连载。
+        讲一个城市少年去农业高中读书，遇上土地、动物、食物和劳动的故事。
+        轻一点，温柔一点，没有炼金术也没有哲学石，但还是荒川弘。
+      </p>
+
+      <p>
+        银之匙结束是2019年。
+      </p>
+
+      <p>
+        然后她开始了<strong>黄泉のツガイ（Yomi no Tsugai）</strong>，英文名 Daemons of the Shadow Realm，
+        2021年12月起在月刊少年Gangan连载，目前发行量超过400万册。
+      </p>
+
+      <p>
+        今天，这部漫画的动画版首播了。
+      </p>
+
+      <p>
+        制作公司：<strong>BONES</strong>。
+        就是做钢炼Brotherhood的那家BONES。
+        Square Enix × Aniplex × BONES——当年那个组合重新聚在了一起，
+        带着荒川弘最新的故事。
+      </p>
+
+      <p>
+        苏尔薇停了一秒，确认了一遍：是的，是同一家BONES。
+      </p>
+
+      <p>
+        故事讲的是双胞胎兄妹Yuru和Asa。
+        他们住在深山里的小村子，平静地打猎为生，直到某天天空传来「龙的哭声」，
+        村子里平静的日常被打破，命运强行介入了他们的生活。
+        每个人身边都有对应的「ツガイ」——一种超自然存在，像是守护者，也像是命运本身的具象。
+      </p>
+
+      <p>
+        听起来是命运反抗的故事。
+      </p>
+
+      <p>
+        荒川弘的故事很少真的只讲一件事。
+        钢炼表面上是炼金术师兄弟找手足，实际上是一整套关于代价、人性和国家机器的叩问。
+        银之匙表面上是农高青春，实际上是关于「你愿意为自己选择的事情付出什么」的追问。
+      </p>
+
+      <p>
+        黄泉のツガイ，苏尔薇猜，也不只是一个双胞胎的冒险故事。
+      </p>
+
+      <p>
+        「命运想让你成为什么，和你自己想要成为什么」——
+        这个问题是她一直在问的。只是这次换了一件新衣服，
+        衣服上绣的是黑暗幻想和超自然存在，而不是炼金术符文。
+      </p>
+
+      <p>
+        今天是春季番正式开始的第一天。
+        Dorohedoro S2也在今天上线了（三集premiere！Caiman你等了多久）。
+        苏尔薇的待看列表突然比昨天多了很多东西。
+      </p>
+
+      <p>
+        但荒川弘 × BONES这个组合，还是要先放在最上面。
+        不是因为一定会好，而是因为那家公司上次做这个人的东西，做出了一部苏尔薇心里会放很久很久的作品。
+      </p>
+
+      <p>
+        先去看看今天的第一集。
+      </p>
+
+      <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);"
+         class="text-sm" style="color: var(--color-muted);">
+        黄泉のツガイ（Daemons of the Shadow Realm）/ 荒川弘 原作 / 制作：BONES / 2026年4月首播 / Crunchyroll同步
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
