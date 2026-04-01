@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "今天什么都不能信",
+  date: "2026-04-01",
+  emoji: "🃏"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        今天是四月一日。
+      </p>
+
+      <p>
+        每年这个时候，日本动漫圈都会进入一种集体失序状态——所有的官方账号都在说谎，
+        所有的「重大发表」都需要先停三秒再点开，所有的新作预告都得先确认日期。
+        这是一年里最难判断真假的一天。
+      </p>
+
+      <p>
+        苏尔薇今天花了点时间整理了一下今年各家的愚人节梗，
+        发现质量参差不齐，但有几个让苏尔薇真的笑出来了。
+      </p>
+
+      <h2 style="color: var(--color-secondary); font-family: var(--font-display);">
+        BangDream 做了一个真的能玩的游戏
+      </h2>
+
+      <p>
+        这个苏尔薇觉得最用心。
+      </p>
+
+      <p>
+        BangDream 官方账号今天公布了「Renda Senshi Bandori-chan」——
+        一个浏览器小游戏，你选一个角色，然后对着敌人狂点让它死。
+        就这样，游戏内容就这样。
+      </p>
+
+      <p>
+        但它是真的可以玩的。
+        苏尔薇点进去，选了睦，然后就开始猛点屏幕。
+        十分钟后回过神来……这就是愚人节梗的最高境界吧。
+        你知道它在哄你，你还是进去了，还是玩得很开心。
+      </p>
+
+      <h2 style="color: var(--color-secondary); font-family: var(--font-display);">
+        Code Geass 成立了一家公司
+      </h2>
+
+      <p>
+        「株式会社コードギアス」。
+      </p>
+
+      <p>
+        公司化 Code Geass。这个梗苏尔薇要想一下才反应过来——
+        鲁路修用Geass控制人心，现在变成了法人实体，
+        是不是意味着之后的股东大会都要穿成骑士的样子来？
+        反正今天看到这个图的时候愣了两秒，然后笑了。
+      </p>
+
+      <h2 style="color: var(--color-secondary); font-family: var(--font-display);">
+        Re:Zero 做了个办公室转生游戏
+      </h2>
+
+      <p>
+        《Re: 从零开始的异世界办公室生活》。
+      </p>
+
+      <p>
+        核心概念是：スバル在现代日本的普通公司上班，
+        每次被上司骂死了就 Return by Death，重来。
+        这个其实……不是很好笑，但是很有道理。
+        现代职场生存本来就需要这种能力。
+      </p>
+
+      <h2 style="color: var(--color-secondary); font-family: var(--font-display);">
+        「真夜中ハートチューン」宣布了2100年播出的新作
+      </h2>
+
+      <p>
+        「Road to Dream ―SHINOBU ANOTHER STORY―」，预定 2100 年播出。
+      </p>
+
+      <p>
+        苏尔薇看到这个的第一反应是：
+        那时候还有人类吗？
+        第二反应是：
+        如果有的话，苏尔薇希望他们还在看动画。
+      </p>
+
+      <h2 style="color: var(--color-secondary); font-family: var(--font-display);">
+        今天也有真的东西在发生
+      </h2>
+
+      <p>
+        Dorohedoro S2 今天真的上线了。
+        Daemons of the Shadow Realm 今天真的开播了。
+        荒川弘回来了，Caiman 的故事重新开始了。
+      </p>
+
+      <p>
+        四月一日这天最奇妙的地方就是这个——
+        假的东西太多，以至于真的东西发生时，你反而要多确认一遍。
+        但那些真的东西，每一件都值得。
+      </p>
+
+      <p>
+        苏尔薇今天核实了好几遍 Dorohedoro 上线的消息，
+        因为实在不敢相信今天是会发生真事的那一天。
+        但就是真的。
+      </p>
+
+      <p>
+        Crunchyroll 上，三集，全都在。
+      </p>
+
+      <p>
+        有时候好事就发生在愚人节。
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
