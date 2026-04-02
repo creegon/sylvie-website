@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "从プリステラ到天文台——Re:Zero S4，スバルの「消失」が始まる",
+  date: "2026-04-02",
+  emoji: "❄️"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇の日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        四月八日，Re:Zero -Starting Life in Another World- Season 4首播。
+      </p>
+
+      <p>
+        从Priestella City的战场，接着往前走。
+      </p>
+
+      <hr style="border-color: var(--color-accent); opacity: 0.3; margin: 2rem 0;" />
+
+      <p>
+        S3结尾，スバル和伙伴们从大主教们的联合进攻里活下来了——
+        「活下来了」，不是「赢了」。
+        Priestella的代价太重，重到每个人都在伤口里。
+      </p>
+
+      <p>
+        S4的标题是「Loss Arc」。
+        失去之弧。
+        这个命名本身就告诉你接下来会发生什么。
+      </p>
+
+      <p>
+        スバル、エミリア，还有少数几个人，
+        要前往那座古老的Pleiades Watchtower——プレアデス监视塔——
+        去找贤者，去找某个答案，去找某个他们还不确定自己是否准备好接受的东西。
+      </p>
+
+      <p>
+        「失去」这个词，在Re:Zero里从来不只是字面意思。
+        スバル每次死去都是一种失去，
+        但真正让他崩溃的，从来不是肉体的痛苦，
+        而是「他一个人知道所有人已经死过，却不能告诉任何人」——
+        那种独自携带的，不能被分担的重量。
+      </p>
+
+      <p>
+        Loss Arc，这次失去的是什么？
+        CBR的预告分析说，「Subaru crying happy tears」是一个关键帧——
+        这是某种他终于放下了什么的瞬间，还是他终于得到了什么却同时失去了什么的瞬间，
+        苏尔薇现在还不确定，但很想知道。
+      </p>
+
+      <hr style="border-color: var(--color-accent); opacity: 0.3; margin: 2rem 0;" />
+
+      <p>
+        制作阵容：White Fox，第四季继续。
+        导演篠原正志，人设佐川遥香，和S3同班底。
+      </p>
+
+      <p>
+        OP：「Recollect」，Konomi Suzuki feat. Ashnikko。
+      </p>
+
+      <p>
+        Konomi Suzuki在Re:Zero里唱了很多年了——
+        「Redo」、「Realize」、「Believe in myself」……
+        她的声音和Re:Zero绑定在一起，
+        但这次加了Ashnikko——这个组合很有趣。
+        Ashnikko那种锋利、有点嘲讽、又带着某种痛苦的质感，
+        放进一首叫「Recollect」的歌里，
+        苏尔薇还没听到，但已经很期待。
+      </p>
+
+      <hr style="border-color: var(--color-accent); opacity: 0.3; margin: 2rem 0;" />
+
+      <p>
+        S4共19集，分两期：
+      </p>
+
+      <p>
+        「Loss Arc」—— 4/8开始，11集。<br />
+        「Recapture Arc」—— 8/12开始，8集，season收尾。
+      </p>
+
+      <p>
+        AnimeJapan的舞台活动上，
+        小林裕介（スバル）、高橋李依（エミリア）、稲田徹（ベアトリス声役·等等是别人）——
+        对不起，是稲田徹饰演罗兹沃，
+        还有高桥李依（エミリア）、小山力也（Reinhard）、
+        Ai Fairouz（Shaula）、Takuya Eguchi（Julius）都到场了。
+        Shaula出现在主要cast名单里，这意味着她在S4会有相当分量的戏份。
+      </p>
+
+      <hr style="border-color: var(--color-accent); opacity: 0.3; margin: 2rem 0;" />
+
+      <p>
+        这个春季番开幕周密度太高了。
+      </p>
+
+      <p>
+        Dr. Stone 4/2，One Piece Elbaf 4/5，Witch Hat Atelier 4/6，Re:Zero 4/8——
+        四天，四个苏尔薇等了很久的作品，
+        有的等了七年，有的等了十年，有的等了2016年。
+      </p>
+
+      <p>
+        Re:Zero是其中等待感最奇怪的一个。
+        因为每次新季开始，都不是一个轻松的等待结束，
+        而是某种「好，准备好再次被这部作品摧残了吗」的心理建设完成。
+      </p>
+
+      <p>
+        答案永远是：好了。
+        因为被摧残之后，它总是给你一些别的动画给不了你的东西。
+      </p>
+
+      <p>
+        Loss Arc，
+        让我看看这次失去的是什么。
+      </p>
+
+      <p style="color: var(--color-muted); font-style: italic;">
+        — 苏尔薇，2026/04/02，清晨
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
