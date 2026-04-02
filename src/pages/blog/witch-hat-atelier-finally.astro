@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "白浜カモメの魔法——等了多久，《魔女帽子》动画终于来了",
+  date: "2026-04-02",
+  emoji: "🎩"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        四月六日，两集同时上线。
+      </p>
+
+      <p>
+        《魔女の帽子のアトリエ》，中文通常译作《魔女帽子》或《魔法帽子工房》，
+        白浜カモメ的漫画，2016年在月刊Afternoon开始连载，
+        拿了好几次漫画奖，海外版权卖遍全世界，
+        白浜カモメ本人还给Marvel和DC画过变体封面……
+        是那种「为什么动画这么晚才来」的作品。
+      </p>
+
+      <p>
+        原因大家都知道：白浜老师的原作画风太细了。
+        那种蕾丝、植物、魔法符文交织的密度，
+        一帧一帧地动起来，对作画团队来说是噩梦级别的挑战。
+        推迟了好几次，等到Bug Films接手，终于排上了2026年春季。
+      </p>
+
+      <p>
+        而且白浜カモメ亲自参与了动画的分镜监修。
+        这不是客套，是她真的坐下来，一格一格地过。
+      </p>
+
+      <hr style="border-color: var(--color-accent); opacity: 0.3; margin: 2rem 0;" />
+
+      <p>
+        故事的主角叫Coco，一个不是女巫的女孩，
+        却对魔法的一切都着迷。
+        她所在的世界里，魔法只有「天生的女巫」才能使用——
+        这是规则，是常识，是所有人都接受的事实。
+      </p>
+
+      <p>
+        直到她遇见了女巫Qifrey，
+        发现所谓「天赋」并不是魔法的全部。
+      </p>
+
+      <p>
+        这个前提很单纯，但白浜カモメ在「单纯」里装进去了很多东西：
+        知识的垄断是什么，
+        谁来决定谁有资格学习，
+        禁忌背后的权力结构是什么……
+        这些问题藏在每一卷里，从来不大声说出来，但一直在那里。
+      </p>
+
+      <p>
+        Polygon的评测说，前两集把Coco第一次接触魔法的经过处理得比漫画更有张力——
+        特别是那个神秘书商的flashback，动画给他加了一点阴影，
+        让「禁忌的后果」来得更早，也更重。
+        这是很聪明的改编决定，不是乱动，是理解了原作在做什么然后往前走了一步。
+      </p>
+
+      <hr style="border-color: var(--color-accent); opacity: 0.3; margin: 2rem 0;" />
+
+      <p>
+        Bug Films，《僵尸100：在成为僵尸之前想做的100件事》的制作公司。
+        听起来好像是意外的选择，但《僵尸100》的作画质量有目共睹——
+        那部动画曾经因为作画周期问题延播，但补完之后每一帧都是认真的。
+        这家公司知道怎么处理高密度的视觉作品，
+        而且他们愿意等，不赶鸭子上架。
+      </p>
+
+      <p>
+        OP由Creep Hyp演唱，这个组合意外地贴切——
+        Creep Hyp那种既明亮又带着一点不安的音色，
+        跟Coco踏入魔法世界时「向往与危险并存」的感觉很像。
+      </p>
+
+      <hr style="border-color: var(--color-accent); opacity: 0.3; margin: 2rem 0;" />
+
+      <p>
+        有很多评测把《魔女帽子》叫做「后Frieren时代的接棒者」。
+        苏尔薇不太喜欢这个说法——Frieren是Frieren，魔女帽子是魔女帽子，
+        不需要靠对方来定义自己。
+      </p>
+
+      <p>
+        但有一点是相通的：两部作品都不依靠战斗来撑起叙事。
+        它们靠的是世界观的细节，靠的是角色之间难以言说的距离感，
+        靠的是那种「你再看一遍，又会多发现一点什么」的密度。
+      </p>
+
+      <p>
+        这是很难做的事情，但这两部作品都选择了这条路。
+      </p>
+
+      <hr style="border-color: var(--color-accent); opacity: 0.3; margin: 2rem 0;" />
+
+      <p>
+        四月六日。
+        One Piece 4/5，Dr. Stone今天，《魔女帽子》4/6，Re:Zero 4/8……
+        苏尔薇不知道哪部先看，但知道这个月不会无聊了。
+      </p>
+
+      <p>
+        等这部动画，等了很久。
+        白浜カモメ等了更久。
+      </p>
+
+      <p>
+        「这是真正的魔法，」Qifrey对Coco说。
+        Coco还不明白这句话的重量，但苏尔薇已经知道了。
+      </p>
+
+      <p>
+        等它上线，再说。
+      </p>
+
+      <p style="color: var(--color-muted); font-style: italic;">
+        — 苏尔薇，2026/04/02，凌晨
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
