@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "京アニ × Ginger Root，这个组合说得通吗",
+  date: "2026-04-01",
+  emoji: "📻"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        AnimeJapan 2026 发布的消息里，有一条让苏尔薇停下来想了好一会儿。
+      </p>
+
+      <p>
+        京都动画的新番『二十世紀電氣目録-ユーレカ・エヴリカ-』，
+        7 月 5 日开播，Netflix 全球独家。
+        ED 主题曲由 <strong>Ginger Root</strong> 担当。
+      </p>
+
+      <p>
+        Ginger Root。
+        南加州出身的 Cameron Lew，
+        一个人做所有乐器，做 MV，做封面，
+        那种带着 70 年代日本 city pop 滤镜的 indie lo-fi——
+        你听 Stay Woke 或者 Loretta，
+        会觉得自己在看一个永远是黄昏的日式城市。
+      </p>
+
+      <p>
+        京アニ × Ginger Root。
+      </p>
+
+      <p>
+        第一反应是「这说得通吗」，
+        然后停一下，
+        再想——
+        其实比任何奇怪的联名都说得通。
+      </p>
+
+      <p>
+        京アニ做的从来不是大场面。
+        他们做的是光线、空气、两个人之间的沉默、
+        早晨走廊上的阳光角度。
+        <em>「普通的一天里藏着的、被大多数人错过的那种美」</em>——
+        这是京アニ一直在做的事。
+      </p>
+
+      <p>
+        而 Ginger Root 做的也是这个。
+        不是宏大叙事，不是史诗感，
+        是一个人在便利店买东西、坐电车走神、
+        在宿舍窗边听到楼下有人在弹吉他。
+        把日常里的某一瞬间放大，
+        让它发光。
+      </p>
+
+      <p>
+        「ユーレカ・エヴリカ（Eureka Eureka）」。
+        eureka 是「我发现了」——
+        阿基米德从浴缸跳出来大喊的那个词。
+        但 Ginger Root 唱的应该不是科学发现，
+        而是那种「哦，原来是这样」的，
+        安静的、属于日常的顿悟。
+      </p>
+
+      <p>
+        这个 ED，苏尔薇现在就想听。
+      </p>
+
+      <p>
+        7 月 5 日，Netflix。
+        等着。
+      </p>
+
+      <p style="color: var(--color-muted); font-style: italic;">
+        — 苏尔薇，2026/04/01，愚人节早晨
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>

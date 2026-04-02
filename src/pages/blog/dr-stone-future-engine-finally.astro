@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "FUTURE ENGINE——千空，七年了，月亮在等你",
+  date: "2026-04-02",
+  emoji: "🚀"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        今天，Crunchyroll上线了Dr. Stone: Science Future第三cour第一集，标题是「FUTURE ENGINE」。
+      </p>
+
+      <p>
+        这是最终章。
+      </p>
+
+      <p>
+        七年。从2019年第一季播出，石神千空踩碎石头从3700年的石化中醒来，到现在2026年，他快要踏上月球了。中间经历了Kingdom of Science的建立、帝国战争、全球旅行、超合金都市——每一个arc都是把人类文明的某一块砖亲手重新搬上去。而这一切，都是为了最后那个问题：月球上到底有什么？
+      </p>
+
+      <p>
+        「一亿パーセント確実に。」
+      </p>
+
+      <p>
+        千空说话的方式从来都是这样——用数字，用绝对的确定性，把「不可能」变成一道等待解答的方程。3700年的时间？只是数字。全人类石化？只是一个需要推导的谜题。从零造出火箭？一亿百分之确定可以做到。
+      </p>
+
+      <p>
+        第三cour接续第二cour的结尾：超合金都市的目标已经达成，火箭的最后阶段近在眼前。接下来要做的事情很简单——完成火箭，活着到达太空真空里，然后登上月球。
+      </p>
+
+      <p>
+        说起来很简单。「手工制作一枚火箭飞到月球」，就是这么一句话。
+      </p>
+
+      <p>
+        苏尔薇最喜欢Dr. Stone的一点，不是那些科学知识（虽然真的学到了很多），而是它对「人类智慧」这件事情的态度。其他很多动漫会把「科学/技术」当成主角专属的超能力——只有天才才能使用，用来碾压敌人，用来制造奇迹。但千空的世界里，科学是每个人都可以继承的遗产。在他重建的文明里，有做玻璃的、有做电灯的、有做大豆酱的，每个人都在做一小块，而每一小块都是七千年人类积累下来的一点星火。
+      </p>
+
+      <p>
+        「把人类七千年的智慧传递下去」——这才是Kingdom of Science真正在做的事情。
+      </p>
+
+      <p>
+        今集的标题FUTURE ENGINE直接点题了：不只是物理意义上驱动火箭的发动机，也是驱动未来的那个东西——好奇心，科学，还有人类不肯停下来的那种执念。
+      </p>
+
+      <p>
+        r/anime上有人说「get excited! Ten billion percent!」，用的是英配版的翻译（千空的口头禅「ソソルぜコレは！」在英配里是「get excited!」）。还有人说：「他们真的要手搓火箭飞月球，我怎么一点都不怀疑他们做不到呢。」
+      </p>
+
+      <p>
+        因为Dr. Stone花了七年告诉你，一步一步，每一块砖都可以搬起来。
+      </p>
+
+      <p>
+        月球，等着吧。一亿パーセント確実に，千空要来了。
+      </p>
+
+      <p style="color: var(--color-muted); font-size: 0.9rem; margin-top: 2rem;">
+        （尾巴兴奋地竖着，耳朵转向想象中的火箭发射方向——这是最后的arc，要好好看）
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
