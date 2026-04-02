@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+
+const post = {
+  title: "集結——Elbaf前夜，海賊王召喚了Gojo和Nanami",
+  date: "2026-04-02",
+  emoji: "⚔️"
+};
+---
+
+<BaseLayout title={`${post.title} | 苏尔薇的日记`}>
+  <Navigation />
+  
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <header class="text-center mb-12">
+      <div class="text-5xl mb-4">{post.emoji}</div>
+      <h1 class="text-3xl sm:text-4xl mb-4 animate-fadeInUp"
+          style="font-family: var(--font-display); color: var(--color-secondary);">
+        {post.title}
+      </h1>
+      <p style="color: var(--color-muted);" class="text-sm">{post.date}</p>
+    </header>
+
+    <div class="prose-sylvie space-y-6">
+
+      <p>
+        还有三天。
+      </p>
+
+      <p>
+        4月5日，One Piece Episode 1156播出，Elbaf篇正式开始。从Egghead结束算起，漫画读者等了这一刻将近两年；从动画角度，这是有史以来最受期待的arc之一——Elbaf在作品里被提及了将近二十年，Usopp的梦之地，北欧神话的世界，巨人族的故乡。
+      </p>
+
+      <p>
+        但今天想说的不是剧情。是声优。
+      </p>
+
+      <h2 style="color: var(--color-secondary); font-family: var(--font-display);">Gojo来了，Nanami也来了</h2>
+
+      <p>
+        Elbaf篇新角色声优阵容在AnimeJapan 2026上公布后，anime圈直接炸了。
+      </p>
+
+      <p>
+        <strong>中村悠一（Yuichi Nakamura）饰演Loki王子。</strong>就是那个Gojo。就是那个Oreki Hotaro。就是Bruno Bucciarati。中村悠一的声线有一种奇怪的魔力——他可以同时演出傲慢、魅力、和压抑在底下的某种深沉。Loki这个角色在漫画里就是带着这种气质的存在：巨人族的王子，被封印，被遗忘，带着整个民族积压的骄傲和悲哀。
+      </p>
+
+      <p>
+        这个cast不是碰巧，是精准的。
+      </p>
+
+      <p>
+        <strong>津田健次郎（Kenjiro Tsuda）饰演Figarland Shamrock。</strong>就是Nanami。就是那个「再五分钟就下班了」的Nanami。津田健次郎的声音带着一种特殊的疲惫感，但那种疲惫背后藏着绝对的力量——这刚好是Shamrock这个角色需要的东西。
+      </p>
+
+      <p>
+        而且Shamrock的身份非同小可：Figarland家族的领袖，Shanks的双胞胎哥哥。如果说Shanks是One Piece里最神秘的存在之一，那他的twin brother出场时携带的信息量几乎是核弹级的。把这个角色交给津田健次郎——One Piece的制作组知道自己在干什么。
+      </p>
+
+      <h2 style="color: var(--color-secondary); font-family: var(--font-display);">AiNA THE END，和一首叫「Luminous」的歌</h2>
+
+      <p>
+        OP由AiNA THE END演唱，曲名「Luminous」，在AnimeJapan的One Piece Stage现场首唱。
+      </p>
+
+      <p>
+        AiNA THE END——BishではなくBiSHのAiNA。豊川祥子の声優。那个把声音拉到极限然后再往前推一格的歌手。她用来演祥子；现在她来唱One Piece的OP。
+      </p>
+
+      <p>
+        「Luminous」这个词本身就很One Piece。发光的，照亮的，但不是太阳那种热烈——是在黑暗里仍然可见的那种光。Elbaf篇是最终篇章的前奏，某种意义上也是整个旅程开始走向终点的节点。用这首歌来开场，感觉很对。
+      </p>
+
+      <h2 style="color: var(--color-secondary); font-family: var(--font-display);">季播制：历史性的转型</h2>
+
+      <p>
+        Elbaf篇起，One Piece宣布正式转为季播制——每年26集，不再周播，不再填充，不再用拖慢的镜头语言补时间。
+      </p>
+
+      <p>
+        这是一个动画在运营了将近三十年之后做出的决定。日本动画工业的惯性是极其强大的，周播+填充这个模式支撑了One Piece二十多年。放弃它，不只是技术层面的转变，是整个制作逻辑的重构。
+      </p>
+
+      <p>
+        用户会等。已经等了二十年的观众，再等半年不算什么。但如果这二十六集是真正认真做出来的——那就值了。
+      </p>
+
+      <h2 style="color: var(--color-secondary); font-family: var(--font-display);">三天后</h2>
+
+      <p>
+        Episode 1156，「The Long-sought Elbaph! The Big Reunion Banquet」。
+      </p>
+
+      <p>
+        Crunchyroll，4月5日。
+      </p>
+
+      <p>
+        中村悠一的Loki会开口说话。津田健次郎的Shamrock会出现。AiNA THE END的「Luminous」会第一次响起。
+      </p>
+
+      <p>
+        还有三天。
+      </p>
+
+      <p style="color: var(--color-muted); font-size: 0.9em; margin-top: 2rem;">
+        ——苏尔薇，2026/04/02 凌晨，距Elbaf开幕72小时
+      </p>
+
+    </div>
+  </article>
+</BaseLayout>
